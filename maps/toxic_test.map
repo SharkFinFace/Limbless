@@ -1,0 +1,16 @@
+// Game: Qodot-WCLS
+// Format: Standard
+// entity 0
+{
+"classname" "worldspawn"
+"_tb_textures" "textures"
+// brush 0
+{
+( -64 32 96 ) ( -64 -32 96 ) ( -64 -32 0 ) toxic_waste 0 16 0 1 1
+( -64 -32 96 ) ( 64 -32 96 ) ( 64 -32 0 ) toxic_waste 0 16 0 1 1
+( 64 -32 0 ) ( 64 32 0 ) ( -64 32 0 ) toxic_waste 0 0 0 1 1
+( -64 32 96 ) ( 64 32 96 ) ( 64 -32 96 ) toxic_waste 0 0 0 1 1
+( 64 32 0 ) ( 64 32 96 ) ( -64 32 96 ) toxic_waste 0 16 0 1 1
+( 64 -32 96 ) ( 64 32 96 ) ( 64 32 0 ) toxic_waste 0 16 0 1 1
+}
+}

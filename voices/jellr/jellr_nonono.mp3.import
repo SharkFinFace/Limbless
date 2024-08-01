@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/jellr_nonono.mp3-5e200d17fd43fc5883b37f797c32a5b8.mp3str"
+
+[deps]
+
+source_file="res://voices/jellr/jellr_nonono.mp3"
+dest_files=[ "res://.import/jellr_nonono.mp3-5e200d17fd43fc5883b37f797c32a5b8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

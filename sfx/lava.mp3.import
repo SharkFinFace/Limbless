@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lava.mp3-f238ad452e17a7734be4186572af4904.mp3str"
+
+[deps]
+
+source_file="res://sfx/lava.mp3"
+dest_files=[ "res://.import/lava.mp3-f238ad452e17a7734be4186572af4904.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

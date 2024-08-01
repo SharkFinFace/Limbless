@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/oldman_foundme.mp3-c9f49f7023a1e128fc5a9935e5a51b0d.mp3str"
+
+[deps]
+
+source_file="res://voices/oldman/oldman_foundme.mp3"
+dest_files=[ "res://.import/oldman_foundme.mp3-c9f49f7023a1e128fc5a9935e5a51b0d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

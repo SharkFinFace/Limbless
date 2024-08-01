@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/agua_temp_le.map-f77f1dab7e39fb29babfcd19ed22c83e.tres"
+
+[deps]
+
+source_file="res://maps/agua_temp_le.map"
+dest_files=[ "res://.import/agua_temp_le.map-f77f1dab7e39fb29babfcd19ed22c83e.tres" ]
+
+[params]
+

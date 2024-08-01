@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/La plaza.mp3-a78cfdedb9f55804814a743305a7a9c4.mp3str"
+
+[deps]
+
+source_file="res://tunes/La plaza.mp3"
+dest_files=[ "res://.import/La plaza.mp3-a78cfdedb9f55804814a743305a7a9c4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

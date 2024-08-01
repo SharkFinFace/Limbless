@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wind woosh loop.ogg-8584f4e6637dabb954ca461d608c9eda.oggstr"
+
+[deps]
+
+source_file="res://sfx/ocean_ambient/wind woosh loop.ogg"
+dest_files=[ "res://.import/wind woosh loop.ogg-8584f4e6637dabb954ca461d608c9eda.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/metal_creak.mp3-ed0c2b1f86778a59563f14d741eed0fe.mp3str"
+
+[deps]
+
+source_file="res://sfx/metal_creak.mp3"
+dest_files=[ "res://.import/metal_creak.mp3-ed0c2b1f86778a59563f14d741eed0fe.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

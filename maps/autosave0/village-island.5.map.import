@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/village-island.5.map-3a04fe726ba827cb31366c7769c6c5e0.tres"
+
+[deps]
+
+source_file="res://maps/autosave0/village-island.5.map"
+dest_files=[ "res://.import/village-island.5.map-3a04fe726ba827cb31366c7769c6c5e0.tres" ]
+
+[params]
+

@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/toxic_expanse.map-c522159689f6a3d4e52fe19e4b75f680.tres"
+
+[deps]
+
+source_file="res://maps/toxic_expanse.map"
+dest_files=[ "res://.import/toxic_expanse.map-c522159689f6a3d4e52fe19e4b75f680.tres" ]
+
+[params]
+

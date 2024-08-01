@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tuber_countdown.mp3-c2a5f35b12aba6bed86b50f4f67b093e.mp3str"
+
+[deps]
+
+source_file="res://voices/tuber/tuber_countdown.mp3"
+dest_files=[ "res://.import/tuber_countdown.mp3-c2a5f35b12aba6bed86b50f4f67b093e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/toxic_drip.1.map-4a440f5a3db74f364ede3c87863c542c.tres"
+
+[deps]
+
+source_file="res://maps/autosave/toxic_drip.1.map"
+dest_files=[ "res://.import/toxic_drip.1.map-4a440f5a3db74f364ede3c87863c542c.tres" ]
+
+[params]
+

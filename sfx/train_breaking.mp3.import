@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/train_breaking.mp3-c706e8129d132970c4fe8d83a94da7e8.mp3str"
+
+[deps]
+
+source_file="res://sfx/train_breaking.mp3"
+dest_files=[ "res://.import/train_breaking.mp3-c706e8129d132970c4fe8d83a94da7e8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

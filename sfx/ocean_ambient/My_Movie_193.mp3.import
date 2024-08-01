@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/My_Movie_193.mp3-16b1a8a6e954ec09e0362993679ff1e3.mp3str"
+
+[deps]
+
+source_file="res://sfx/ocean_ambient/My_Movie_193.mp3"
+dest_files=[ "res://.import/My_Movie_193.mp3-16b1a8a6e954ec09e0362993679ff1e3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0.0

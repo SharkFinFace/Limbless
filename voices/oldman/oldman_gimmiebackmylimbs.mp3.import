@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/oldman_gimmiebackmylimbs.mp3-d2f914d532dbccd3e7384086a2ef25e6.mp3str"
+
+[deps]
+
+source_file="res://voices/oldman/oldman_gimmiebackmylimbs.mp3"
+dest_files=[ "res://.import/oldman_gimmiebackmylimbs.mp3-d2f914d532dbccd3e7384086a2ef25e6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

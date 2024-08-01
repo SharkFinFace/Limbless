@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/maze_greenscreen.map-cdcd8ac8a4df1974e853d1a808e8ee7e.tres"
+
+[deps]
+
+source_file="res://maps/maze_greenscreen.map"
+dest_files=[ "res://.import/maze_greenscreen.map-cdcd8ac8a4df1974e853d1a808e8ee7e.tres" ]
+
+[params]
+

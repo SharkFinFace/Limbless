@@ -1,0 +1,423 @@
+[gd_scene load_steps=63 format=2]
+
+[ext_resource path="res://antdueler/ADCriminalSpriteAnimator.gd" type="Script" id=1]
+[ext_resource path="res://antdueler/GS_ADCriminal.gd" type="Script" id=2]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler0.png" type="Texture" id=3]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler2.png" type="Texture" id=4]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler1.png" type="Texture" id=5]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler3.png" type="Texture" id=6]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler5.png" type="Texture" id=7]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler4.png" type="Texture" id=8]
+[ext_resource path="res://antdueler/GS_ADFightZone.gd" type="Script" id=9]
+[ext_resource path="res://antdueler/slashbeam.png" type="Texture" id=10]
+[ext_resource path="res://antdueler/GS_ADAttackBar.gd" type="Script" id=11]
+[ext_resource path="res://antdueler/GS_ADHitZone.gd" type="Script" id=12]
+[ext_resource path="res://antdueler/fightbox.png" type="Texture" id=13]
+[ext_resource path="res://antdueler/hitzone.png" type="Texture" id=14]
+[ext_resource path="res://antdueler/RevealPlaneTween.gd" type="Script" id=15]
+[ext_resource path="res://antdueler/AttackSlider.gd" type="Script" id=16]
+[ext_resource path="res://antdueler/scorekeeper.gd" type="Script" id=17]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler_owie_ll.png" type="Texture" id=18]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler_owie_rr.png" type="Texture" id=19]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler_owie_r.png" type="Texture" id=20]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler_owie_l.png" type="Texture" id=21]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler_owie_cent.png" type="Texture" id=22]
+[ext_resource path="res://antdueler/criminal/criminal_antdueler_attack.png" type="Texture" id=23]
+[ext_resource path="res://antdueler/URx8UZsh.wav" type="AudioStream" id=24]
+[ext_resource path="res://antdueler/PJKRKdAa.wav" type="AudioStream" id=25]
+[ext_resource path="res://tunes/Pixel crime.mp3" type="AudioStream" id=26]
+[ext_resource path="res://videos/aNSkkZk4KO4.ogv" type="VideoStream" id=27]
+[ext_resource path="res://scripts/GUIScalers/GS_Video16to9.gd" type="Script" id=28]
+[ext_resource path="res://shaders/chromakey.gdshader" type="Shader" id=29]
+[ext_resource path="res://videos/explosion_worse.ogv" type="VideoStream" id=30]
+[ext_resource path="res://antdueler/GS_hbarCrimal.gd" type="Script" id=31]
+[ext_resource path="res://antdueler/healthbar/healthbar_06.png" type="Texture" id=32]
+[ext_resource path="res://antdueler/healthbar/healthbar_00.png" type="Texture" id=33]
+[ext_resource path="res://antdueler/GS_hbarPlayer.gd" type="Script" id=34]
+[ext_resource path="res://antdueler/healthbar/healthbar_01.png" type="Texture" id=35]
+[ext_resource path="res://antdueler/healthbar/healthbar_05.png" type="Texture" id=36]
+[ext_resource path="res://antdueler/healthbar/healthbar_04.png" type="Texture" id=37]
+[ext_resource path="res://antdueler/healthbar/healthbar_02.png" type="Texture" id=38]
+[ext_resource path="res://antdueler/healthbar/healthbar_03.png" type="Texture" id=39]
+[ext_resource path="res://antdueler/healthbar/healthbar_07.png" type="Texture" id=40]
+[ext_resource path="res://antdueler/healthbar/healthbar_08.png" type="Texture" id=41]
+[ext_resource path="res://antdueler/healthbar/healthbar_11.png" type="Texture" id=42]
+[ext_resource path="res://antdueler/healthbar/healthbar_09.png" type="Texture" id=43]
+[ext_resource path="res://antdueler/healthbar/healthbar_10.png" type="Texture" id=44]
+[ext_resource path="res://antdueler/antdueler_boot.tscn" type="PackedScene" id=45]
+[ext_resource path="res://scripts/preloads/PreloadAntdueler.gd" type="Script" id=46]
+
+[sub_resource type="Animation" id=3]
+resource_name = "attack"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 23 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+length = 0.9
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "owie"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "five"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 33 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "four"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 35 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "one"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "three"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 38 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "two"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 39 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "zero"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 36 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "five"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 32 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "four"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 40 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "one"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 44 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "three"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 41 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "two"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 43 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "zero"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 42 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 29 )
+shader_param/key_color = Color( 0, 1, 0, 1 )
+shader_param/similarity = 0.4
+shader_param/smoothness = 0.08
+shader_param/spill = 0.1
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 17 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CriminalAntdueler" type="Sprite" parent="."]
+position = Vector2( 320, -102 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="SpriteAnimationPlayer" type="AnimationPlayer" parent="CriminalAntdueler"]
+anims/attack = SubResource( 3 )
+anims/idle = SubResource( 1 )
+anims/owie = SubResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Fight" type="TextureRect" parent="."]
+margin_left = 192.0
+margin_top = 256.0
+margin_right = 448.0
+margin_bottom = 320.0
+texture = ExtResource( 13 )
+expand = true
+script = ExtResource( 9 )
+
+[node name="HitZone" type="TextureRect" parent="."]
+margin_left = 219.0
+margin_top = 256.0
+margin_right = 251.0
+margin_bottom = 320.0
+texture = ExtResource( 14 )
+expand = true
+script = ExtResource( 12 )
+
+[node name="Attack" type="TextureRect" parent="."]
+margin_left = 316.0
+margin_top = 256.0
+margin_right = 324.0
+margin_bottom = 320.0
+texture = ExtResource( 10 )
+expand = true
+script = ExtResource( 11 )
+
+[node name="Node" type="Node" parent="Attack"]
+script = ExtResource( 16 )
+
+[node name="RevealPlane" type="ColorRect" parent="."]
+anchor_top = 0.55
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 15 )
+
+[node name="success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -3.0
+
+[node name="wompwomp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+volume_db = -9.0
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
+volume_db = 1.0
+
+[node name="hbarCrimal" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 33 )
+expand = true
+script = ExtResource( 31 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hbarCrimal"]
+anims/five = SubResource( 5 )
+anims/four = SubResource( 6 )
+anims/one = SubResource( 7 )
+anims/three = SubResource( 8 )
+anims/two = SubResource( 9 )
+anims/zero = SubResource( 10 )
+
+[node name="hbarPlayer" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 32 )
+expand = true
+script = ExtResource( 34 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hbarPlayer"]
+anims/five = SubResource( 11 )
+anims/four = SubResource( 12 )
+anims/one = SubResource( 13 )
+anims/three = SubResource( 14 )
+anims/two = SubResource( 15 )
+anims/zero = SubResource( 16 )
+
+[node name="explosion" type="VideoPlayer" parent="."]
+visible = false
+material = SubResource( 4 )
+margin_right = 40.0
+margin_bottom = 40.0
+stream = ExtResource( 27 )
+volume_db = 3.0
+autoplay = true
+paused = true
+script = ExtResource( 28 )
+
+[node name="explosionWorse" type="VideoPlayer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 30 )
+volume_db = 5.0
+autoplay = true
+paused = true
+
+[node name="Control" parent="." instance=ExtResource( 45 )]
+
+[node name="Preload" type="Node" parent="."]
+script = ExtResource( 46 )

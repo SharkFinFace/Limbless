@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wave_03_cc0-11505__transitking__wavesound.mp3-fa963b8eddca97f0978169c0822e84e6.mp3str"
+
+[deps]
+
+source_file="res://sfx/ocean_ambient/wave_03_cc0-11505__transitking__wavesound.mp3"
+dest_files=[ "res://.import/wave_03_cc0-11505__transitking__wavesound.mp3-fa963b8eddca97f0978169c0822e84e6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

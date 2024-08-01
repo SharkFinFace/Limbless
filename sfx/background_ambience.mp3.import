@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/background_ambience.mp3-580578cf9823b1d188d32a47757ba16e.mp3str"
+
+[deps]
+
+source_file="res://sfx/background_ambience.mp3"
+dest_files=[ "res://.import/background_ambience.mp3-580578cf9823b1d188d32a47757ba16e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

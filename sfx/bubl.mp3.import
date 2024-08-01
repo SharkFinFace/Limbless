@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bubl.mp3-8aec97984de26bd8f6c6326cbeb7d481.mp3str"
+
+[deps]
+
+source_file="res://sfx/bubl.mp3"
+dest_files=[ "res://.import/bubl.mp3-8aec97984de26bd8f6c6326cbeb7d481.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

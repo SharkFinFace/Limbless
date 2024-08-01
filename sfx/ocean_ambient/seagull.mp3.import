@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/seagull.mp3-96faaec5c5dff33695c4f76f2d4e417c.mp3str"
+
+[deps]
+
+source_file="res://sfx/ocean_ambient/seagull.mp3"
+dest_files=[ "res://.import/seagull.mp3-96faaec5c5dff33695c4f76f2d4e417c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0.0

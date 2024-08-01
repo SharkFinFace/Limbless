@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/water_expanse.map-7f21df9cfd3d8d0591c10966a7c3bd4f.tres"
+
+[deps]
+
+source_file="res://maps/water_expanse.map"
+dest_files=[ "res://.import/water_expanse.map-7f21df9cfd3d8d0591c10966a7c3bd4f.tres" ]
+
+[params]
+

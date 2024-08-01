@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://khat.png" type="Texture" id=1]
+[ext_resource path="res://shaders/greenscreen.gdshader" type="Shader" id=2]
+
+[resource]
+shader = ExtResource( 2 )
+shader_param/width = 0.25
+shader_param/height = 0.25
+shader_param/isSquare = true
+shader_param/sprite_texture = ExtResource( 1 )

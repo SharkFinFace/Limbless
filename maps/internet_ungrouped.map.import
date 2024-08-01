@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/internet_ungrouped.map-bf321be6e74def1d75ae79b9d190f65a.tres"
+
+[deps]
+
+source_file="res://maps/internet_ungrouped.map"
+dest_files=[ "res://.import/internet_ungrouped.map-bf321be6e74def1d75ae79b9d190f65a.tres" ]
+
+[params]
+

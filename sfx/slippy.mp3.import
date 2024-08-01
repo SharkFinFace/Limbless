@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/slippy.mp3-0d6424ca9ac97f7520ac4a39ca2b29fc.mp3str"
+
+[deps]
+
+source_file="res://sfx/slippy.mp3"
+dest_files=[ "res://.import/slippy.mp3-0d6424ca9ac97f7520ac4a39ca2b29fc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

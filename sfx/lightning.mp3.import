@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lightning.mp3-40ca44326d19ded05ef0e6ae0eec2a93.mp3str"
+
+[deps]
+
+source_file="res://sfx/lightning.mp3"
+dest_files=[ "res://.import/lightning.mp3-40ca44326d19ded05ef0e6ae0eec2a93.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

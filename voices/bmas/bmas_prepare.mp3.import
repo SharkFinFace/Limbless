@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bmas_prepare.mp3-07b403d236af6b2a1ca8c32000774ccb.mp3str"
+
+[deps]
+
+source_file="res://voices/bmas/bmas_prepare.mp3"
+dest_files=[ "res://.import/bmas_prepare.mp3-07b403d236af6b2a1ca8c32000774ccb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

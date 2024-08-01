@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/huh.mp3-4411f187fc7b2672b44c63584e6dcf64.mp3str"
+
+[deps]
+
+source_file="res://sfx/huh.mp3"
+dest_files=[ "res://.import/huh.mp3-4411f187fc7b2672b44c63584e6dcf64.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

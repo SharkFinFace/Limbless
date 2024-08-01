@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/train_interior.10.map-1da3f44529a8a95ae210f3ff9870242e.tres"
+
+[deps]
+
+source_file="res://maps/autosave0/train_interior.10.map"
+dest_files=[ "res://.import/train_interior.10.map-1da3f44529a8a95ae210f3ff9870242e.tres" ]
+
+[params]
+

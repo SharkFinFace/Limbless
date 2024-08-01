@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bmas_getout.mp3-465e8a54119cd3775edc336096cb2be1.mp3str"
+
+[deps]
+
+source_file="res://voices/bmas/bmas_getout.mp3"
+dest_files=[ "res://.import/bmas_getout.mp3-465e8a54119cd3775edc336096cb2be1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

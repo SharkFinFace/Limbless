@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/temple_exit_train.map-efd8c53813e140f86e5f20f154914563.tres"
+
+[deps]
+
+source_file="res://maps/temple_exit_train.map"
+dest_files=[ "res://.import/temple_exit_train.map-efd8c53813e140f86e5f20f154914563.tres" ]
+
+[params]
+

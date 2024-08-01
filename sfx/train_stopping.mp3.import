@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/train_stopping.mp3-a8553b81dcd085387ae86c705216a4d5.mp3str"
+
+[deps]
+
+source_file="res://sfx/train_stopping.mp3"
+dest_files=[ "res://.import/train_stopping.mp3-a8553b81dcd085387ae86c705216a4d5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

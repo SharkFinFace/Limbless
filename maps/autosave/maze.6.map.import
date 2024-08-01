@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/maze.6.map-00a3b6ffcea493f6bee726e38dbcaef9.tres"
+
+[deps]
+
+source_file="res://maps/autosave/maze.6.map"
+dest_files=[ "res://.import/maze.6.map-00a3b6ffcea493f6bee726e38dbcaef9.tres" ]
+
+[params]
+

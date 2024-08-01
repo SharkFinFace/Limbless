@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rnr6qzKy.wav-857ac9388b6eeeab46ba76c007c6f312.sample"
+
+[deps]
+
+source_file="res://sfx/rnr6qzKy.wav"
+dest_files=[ "res://.import/rnr6qzKy.wav-857ac9388b6eeeab46ba76c007c6f312.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

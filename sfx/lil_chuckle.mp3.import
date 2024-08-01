@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lil_chuckle.mp3-b21cd786c9b1d9a82f3506152d0b6c44.mp3str"
+
+[deps]
+
+source_file="res://sfx/lil_chuckle.mp3"
+dest_files=[ "res://.import/lil_chuckle.mp3-b21cd786c9b1d9a82f3506152d0b6c44.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

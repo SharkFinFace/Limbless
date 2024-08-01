@@ -1,0 +1,186 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://scripts/GUIScalers/GS_TextureRect16to9.gd" type="Script" id=1]
+[ext_resource path="res://voices/oldman/oldman_foundme.mp3" type="AudioStream" id=2]
+[ext_resource path="res://scripts/CutsceneManagers/CutsceneManagerLimblessFoundMe.gd" type="Script" id=3]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/2.png" type="Texture" id=4]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/0.png" type="Texture" id=5]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/1.png" type="Texture" id=6]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/4.png" type="Texture" id=7]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/3.png" type="Texture" id=8]
+[ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://scripts/GUIScalers/GS_InteractionLabel.gd" type="Script" id=10]
+[ext_resource path="res://scripts/GUIScalers/GS_CCbg.gd" type="Script" id=11]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/00.png" type="Texture" id=12]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/07.png" type="Texture" id=13]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/03.png" type="Texture" id=14]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/06.png" type="Texture" id=15]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/01.png" type="Texture" id=16]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/02.png" type="Texture" id=17]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/05.png" type="Texture" id=18]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/04.png" type="Texture" id=19]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s2.png" type="Texture" id=20]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s0.png" type="Texture" id=21]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s1.png" type="Texture" id=22]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s01.png" type="Texture" id=23]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s06.png" type="Texture" id=24]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s04.png" type="Texture" id=25]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s07.png" type="Texture" id=26]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s02.png" type="Texture" id=27]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s05.png" type="Texture" id=28]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s03.png" type="Texture" id=29]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s00.png" type="Texture" id=30]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/f0.png" type="Texture" id=31]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/f1.png" type="Texture" id=32]
+
+[sub_resource type="Animation" id=6]
+resource_name = "bob"
+length = 0.8
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 12 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "bobAway"
+length = 0.8
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 30 ), ExtResource( 23 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 30 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "look up"
+length = 0.45
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 7 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "sad"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 21 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "shakey"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 6 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "talk"
+length = 0.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 32 ), ExtResource( 31 ), ExtResource( 32 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[node name="Cutscene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+rect_pivot_offset = Vector2( -18, 422 )
+expand = true
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+anims/bob = SubResource( 6 )
+anims/bobAway = SubResource( 8 )
+"anims/look up" = SubResource( 5 )
+anims/sad = SubResource( 7 )
+anims/shakey = SubResource( 4 )
+anims/talk = SubResource( 9 )
+script = ExtResource( 3 )
+
+[node name="CCLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_bottom = -26.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+autowrap = true
+script = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="CCLabel"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.509804 )
+script = ExtResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = 10.0

@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://shaders/chromakey.gdshader" type="Shader" id=1]
+[ext_resource path="res://videos/shopkeeper_greet.ogv" type="VideoStream" id=2]
+[ext_resource path="res://scripts/CutsceneManagers/CutsceneManagerShopkeeperGreet.gd" type="Script" id=3]
+[ext_resource path="res://scripts/GUIScalers/GS_Video16to9.gd" type="Script" id=4]
+[ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://scripts/GUIScalers/GS_InteractionLabel.gd" type="Script" id=10]
+[ext_resource path="res://scripts/GUIScalers/GS_CCbg.gd" type="Script" id=11]
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+shader_param/key_color = Color( 0, 1, 0, 1 )
+shader_param/similarity = 0.4
+shader_param/smoothness = 0.08
+shader_param/spill = 0.1
+
+[sub_resource type="DynamicFont" id=3]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[node name="Cutscene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+visible = false
+material = SubResource( 4 )
+margin_right = 40.0
+margin_bottom = 40.0
+stream = ExtResource( 2 )
+autoplay = true
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VideoPlayer"]
+script = ExtResource( 3 )
+
+[node name="CCLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_bottom = -26.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+autowrap = true
+script = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="CCLabel"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.509804 )
+script = ExtResource( 11 )

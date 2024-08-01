@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Agua.mp3-3e4cd2174a9dafa686f5be8e78528ec9.mp3str"
+
+[deps]
+
+source_file="res://tunes/Agua.mp3"
+dest_files=[ "res://.import/Agua.mp3-3e4cd2174a9dafa686f5be8e78528ec9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

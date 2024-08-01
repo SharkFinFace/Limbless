@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pixel crime.mp3-843360918a51c524d5adacad757ecf7a.mp3str"
+
+[deps]
+
+source_file="res://tunes/Pixel crime.mp3"
+dest_files=[ "res://.import/Pixel crime.mp3-843360918a51c524d5adacad757ecf7a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

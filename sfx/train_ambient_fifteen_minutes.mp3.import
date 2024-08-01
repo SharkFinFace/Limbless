@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/train_ambient_fifteen_minutes.mp3-492fb7fe5d2ce1ac269f9c01daf21835.mp3str"
+
+[deps]
+
+source_file="res://sfx/train_ambient_fifteen_minutes.mp3"
+dest_files=[ "res://.import/train_ambient_fifteen_minutes.mp3-492fb7fe5d2ce1ac269f9c01daf21835.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

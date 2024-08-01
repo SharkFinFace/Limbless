@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/maze_crazy.map-48991ed22b5bdf33881ed15f9546b6f7.tres"
+
+[deps]
+
+source_file="res://maps/maze_crazy.map"
+dest_files=[ "res://.import/maze_crazy.map-48991ed22b5bdf33881ed15f9546b6f7.tres" ]
+
+[params]
+

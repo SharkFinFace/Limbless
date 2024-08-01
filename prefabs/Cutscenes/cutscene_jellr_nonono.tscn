@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scripts/GUIScalers/GS_TextureRect16to9.gd" type="Script" id=1]
+[ext_resource path="res://voices/jellr/jellr_nonono.mp3" type="AudioStream" id=2]
+[ext_resource path="res://cutscene_sprites/cutscene_jellr_nonono/7nonono_01.png" type="Texture" id=3]
+[ext_resource path="res://cutscene_sprites/cutscene_jellr_nonono/7nonono_00.png" type="Texture" id=4]
+[ext_resource path="res://cutscene_sprites/cutscene_jellr_nonono/7nonono_02.png" type="Texture" id=5]
+[ext_resource path="res://scripts/CutsceneManagers/CutsceneManagerJellrNonono.gd" type="Script" id=6]
+[ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://scripts/GUIScalers/GS_InteractionLabel.gd" type="Script" id=10]
+[ext_resource path="res://scripts/GUIScalers/GS_CCbg.gd" type="Script" id=11]
+
+[sub_resource type="Animation" id=4]
+resource_name = "nonono"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[node name="Cutscene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+rect_pivot_offset = Vector2( -18, 422 )
+expand = true
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+anims/nonono = SubResource( 4 )
+script = ExtResource( 6 )
+
+[node name="CCLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_bottom = -26.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+autowrap = true
+script = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="CCLabel"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.509804 )
+script = ExtResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = 4.0

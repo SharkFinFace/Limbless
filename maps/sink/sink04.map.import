@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/sink04.map-b60e9184ad087a0858f6c7a6d97caef2.tres"
+
+[deps]
+
+source_file="res://maps/sink/sink04.map"
+dest_files=[ "res://.import/sink04.map-b60e9184ad087a0858f6c7a6d97caef2.tres" ]
+
+[params]
+

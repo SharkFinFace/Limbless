@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/GUIScalers/GS_InteractionLabel.gd" type="Script" id=2]
+[ext_resource path="res://scripts/GUIScalers/GS_CCbg.gd" type="Script" id=3]
+[ext_resource path="res://scripts/CutsceneManagers/CutsceneManagerCriminalTheyJumpInMe.gd" type="Script" id=4]
+[ext_resource path="res://scripts/GUIScalers/GS_TextureRect16to9.gd" type="Script" id=5]
+[ext_resource path="res://cutscene_sprites/cutscene_criminal_talk/criminal_talk_1.png" type="Texture" id=10]
+[ext_resource path="res://voices/criminal/criminal_nevercatchme.mp3" type="AudioStream" id=11]
+[ext_resource path="res://voices/oldman/oldman_gimmiebackmylimbs.mp3" type="AudioStream" id=13]
+[ext_resource path="res://sfx/skadoodle.mp3" type="AudioStream" id=15]
+
+[sub_resource type="Animation" id=8]
+resource_name = "idle"
+length = 0.001
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("../criminal:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 11, 2.5, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../criminal:mesh:material:albedo_texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+params_billboard_mode = 2
+params_use_alpha_scissor = true
+params_alpha_scissor_threshold = 0.98
+albedo_texture = ExtResource( 10 )
+
+[sub_resource type="QuadMesh" id=6]
+material = SubResource( 5 )
+size = Vector2( 4, 4 )
+
+[node name="Cutscene" type="Spatial"]
+
+[node name="ColorRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+rect_pivot_offset = Vector2( -18, 422 )
+expand = true
+script = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+anims/idle = SubResource( 8 )
+script = ExtResource( 4 )
+
+[node name="CCLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_bottom = -26.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+autowrap = true
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="CCLabel"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.509804 )
+script = ExtResource( 3 )
+
+[node name="runner" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="limbless" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = 3.0
+
+[node name="nevercatchme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 10.0
+
+[node name="criminal" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.5, 1 )
+cast_shadow = 0
+mesh = SubResource( 6 )
+skeleton = NodePath("../ColorRect")

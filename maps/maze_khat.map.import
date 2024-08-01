@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/maze_khat.map-b7b9e8b00890266b19d9fdcf2862eba1.tres"
+
+[deps]
+
+source_file="res://maps/maze_khat.map"
+dest_files=[ "res://.import/maze_khat.map-b7b9e8b00890266b19d9fdcf2862eba1.tres" ]
+
+[params]
+

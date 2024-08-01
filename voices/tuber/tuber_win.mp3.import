@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tuber_win.mp3-5cc6c755b247045bd6a7dabc105bc3e5.mp3str"
+
+[deps]
+
+source_file="res://voices/tuber/tuber_win.mp3"
+dest_files=[ "res://.import/tuber_win.mp3-5cc6c755b247045bd6a7dabc105bc3e5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

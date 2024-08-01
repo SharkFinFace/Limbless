@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/village.20.map-779dd1f37a45e6be6bf57ea030a58e9f.tres"
+
+[deps]
+
+source_file="res://maps/autosave0/village.20.map"
+dest_files=[ "res://.import/village.20.map-779dd1f37a45e6be6bf57ea030a58e9f.tres" ]
+
+[params]
+

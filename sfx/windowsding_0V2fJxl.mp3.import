@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/windowsding_0V2fJxl.mp3-d35095da3073efd0b2a55cc2fd83cdf4.mp3str"
+
+[deps]
+
+source_file="res://sfx/windowsding_0V2fJxl.mp3"
+dest_files=[ "res://.import/windowsding_0V2fJxl.mp3-d35095da3073efd0b2a55cc2fd83cdf4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

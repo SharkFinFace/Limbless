@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/criminal_nevercatchme.mp3-7c8b5f4c2b12c1463387bbf13ae2f7c3.mp3str"
+
+[deps]
+
+source_file="res://voices/criminal/criminal_nevercatchme.mp3"
+dest_files=[ "res://.import/criminal_nevercatchme.mp3-7c8b5f4c2b12c1463387bbf13ae2f7c3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

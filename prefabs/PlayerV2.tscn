@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/player/Player.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Interaction/Interaction.gd" type="Script" id=2]
+
+[sub_resource type="PhysicsMaterial" id=4]
+friction = 0.0
+
+[sub_resource type="CapsuleShape" id=1054]
+radius = 0.3
+height = 0.6
+
+[sub_resource type="SpatialMaterial" id=1055]
+albedo_color = Color( 0.16, 0.8, 0.16, 1 )
+
+[sub_resource type="CapsuleMesh" id=3]
+material = SubResource( 1055 )
+radius = 0.3
+mid_height = 0.6
+radial_segments = 16
+
+[node name="Player" type="RigidBody"]
+mode = 2
+physics_material_override = SubResource( 4 )
+gravity_scale = 2.0
+script = ExtResource( 1 )
+mouse_sensitivity = Vector2( 0.1, 0.1 )
+max_speed = 7.0
+sprint_factor = 1.0
+sprint_fov = 30.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.2, 0 )
+shape = SubResource( 1054 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
+visible = false
+mesh = SubResource( 3 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 2.2, 0 )
+shape = SubResource( 1054 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape2"]
+visible = false
+mesh = SubResource( 3 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.7, 0 )
+shape = SubResource( 1054 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape3"]
+visible = false
+mesh = SubResource( 3 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 0 )
+current = true
+fov = 90.0
+far = 200.0
+
+[node name="InteractRayCast" type="RayCast" parent="Camera"]
+enabled = true
+cast_to = Vector3( 0, 0, -3 )
+collision_mask = 2
+script = ExtResource( 2 )

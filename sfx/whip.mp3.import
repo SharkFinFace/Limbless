@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/whip.mp3-a3d7a7365f40dfd8c4ef3c4e8a303c5f.mp3str"
+
+[deps]
+
+source_file="res://sfx/whip.mp3"
+dest_files=[ "res://.import/whip.mp3-a3d7a7365f40dfd8c4ef3c4e8a303c5f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

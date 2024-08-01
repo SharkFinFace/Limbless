@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/scroller3d.gdshader" type="Shader" id=1]
+[ext_resource path="res://maps/textures/Vaporwave_Grid.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/direction_and_speed = Vector2( 0.25, 0 )
+shader_param/scale = Vector2( 1, 1 )
+shader_param/flip = false
+shader_param/albedo = ExtResource( 2 )

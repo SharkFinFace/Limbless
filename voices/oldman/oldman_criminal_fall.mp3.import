@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/oldman_criminal_fall.mp3-da57196697d6d7a6df09aa0a430d5bc3.mp3str"
+
+[deps]
+
+source_file="res://voices/oldman/oldman_criminal_fall.mp3"
+dest_files=[ "res://.import/oldman_criminal_fall.mp3-da57196697d6d7a6df09aa0a430d5bc3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/maze_kys.map-c794d33ddd4ea64774c1d8ef25b4f007.tres"
+
+[deps]
+
+source_file="res://maps/maze_kys.map"
+dest_files=[ "res://.import/maze_kys.map-c794d33ddd4ea64774c1d8ef25b4f007.tres" ]
+
+[params]
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Scrolling.mp3-3a210d4cf90be16e1ea218f7ffb80e80.mp3str"
+
+[deps]
+
+source_file="res://tunes/Scrolling.mp3"
+dest_files=[ "res://.import/Scrolling.mp3-3a210d4cf90be16e1ea218f7ffb80e80.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

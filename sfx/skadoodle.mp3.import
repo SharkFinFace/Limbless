@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/skadoodle.mp3-fc7703cb45fe438d7bf98d4c8fbf6158.mp3str"
+
+[deps]
+
+source_file="res://sfx/skadoodle.mp3"
+dest_files=[ "res://.import/skadoodle.mp3-fc7703cb45fe438d7bf98d4c8fbf6158.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

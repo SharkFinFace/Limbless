@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/mall_og.map-a7f4d78fa46298dba3d3b5cb592aa0d5.tres"
+
+[deps]
+
+source_file="res://maps/mall_og.map"
+dest_files=[ "res://.import/mall_og.map-a7f4d78fa46298dba3d3b5cb592aa0d5.tres" ]
+
+[params]
+

@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/temple_steps.map-29510141b41b2ca70f0d530be94b965b.tres"
+
+[deps]
+
+source_file="res://maps/temple_steps.map"
+dest_files=[ "res://.import/temple_steps.map-29510141b41b2ca70f0d530be94b965b.tres" ]
+
+[params]
+

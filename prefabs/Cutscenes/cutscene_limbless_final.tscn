@@ -1,0 +1,475 @@
+[gd_scene load_steps=87 format=2]
+
+[ext_resource path="res://scripts/GUIScalers/GS_CCbg.gd" type="Script" id=1]
+[ext_resource path="res://scripts/CutsceneManagers/CutsceneManagerLimblessFinal.gd" type="Script" id=2]
+[ext_resource path="res://scripts/GUIScalers/GS_InteractionLabel.gd" type="Script" id=3]
+[ext_resource path="res://scripts/GUIScalers/GS_TextureRect16to9.gd" type="Script" id=4]
+[ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/4.png" type="Texture" id=6]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s1.png" type="Texture" id=7]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_01_delay-0.02s.png" type="Texture" id=8]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s0.png" type="Texture" id=9]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_03_delay-0.02s.png" type="Texture" id=10]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_02_delay-0.02s.png" type="Texture" id=11]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/01.png" type="Texture" id=12]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s2.png" type="Texture" id=13]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/0.png" type="Texture" id=14]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s06.png" type="Texture" id=15]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s04.png" type="Texture" id=16]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s02.png" type="Texture" id=17]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/04.png" type="Texture" id=18]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s07.png" type="Texture" id=19]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/03.png" type="Texture" id=20]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s05.png" type="Texture" id=21]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/1 (2).png" type="Texture" id=22]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/1.png" type="Texture" id=23]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/2.png" type="Texture" id=24]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s01.png" type="Texture" id=25]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/07.png" type="Texture" id=26]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s00.png" type="Texture" id=27]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/s03.png" type="Texture" id=28]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/06.png" type="Texture" id=29]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_10_delay-0.02s.png" type="Texture" id=30]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_04_delay-0.02s.png" type="Texture" id=31]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/1.png" type="Texture" id=32]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/paper.png" type="Texture" id=33]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_06_delay-0.02s.png" type="Texture" id=34]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/02.png" type="Texture" id=35]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_09_delay-0.02s.png" type="Texture" id=36]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/0.png" type="Texture" id=37]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/05.png" type="Texture" id=38]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_05_delay-0.02s.png" type="Texture" id=39]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/0 (2).png" type="Texture" id=40]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/00.png" type="Texture" id=41]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_07_delay-0.02s.png" type="Texture" id=42]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_08_delay-0.02s.png" type="Texture" id=43]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_foundme/3.png" type="Texture" id=44]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_fall/frame_00_delay-0.02s.png" type="Texture" id=45]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_legone/yipee.png" type="Texture" id=46]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_legone/pog.png" type="Texture" id=47]
+[ext_resource path="res://voices/oldman/oldman_final.mp3" type="AudioStream" id=48]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_final/x0.png" type="Texture" id=49]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_final/0.png" type="Texture" id=50]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_final/1.png" type="Texture" id=51]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_final/x1.png" type="Texture" id=52]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_final/w1.png" type="Texture" id=53]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_final/w0.png" type="Texture" id=54]
+[ext_resource path="res://sfx/rise.mp3" type="AudioStream" id=55]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm8,100.png" type="Texture" id=56]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm1,100.png" type="Texture" id=57]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm5,100.png" type="Texture" id=58]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm4,100.png" type="Texture" id=59]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm9,100.png" type="Texture" id=60]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm3,100.png" type="Texture" id=61]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm6,100.png" type="Texture" id=62]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm7,100.png" type="Texture" id=63]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm10,100.png" type="Texture" id=64]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm0,100.png" type="Texture" id=65]
+[ext_resource path="res://cutscene_sprites/cutscene_bread/_a_frm2,100.png" type="Texture" id=66]
+[ext_resource path="res://cutscene_sprites/cutscene_limbless_final/pogogg.png" type="Texture" id=67]
+
+[sub_resource type="Animation" id=4]
+resource_name = "bob"
+length = 0.8
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 41 ), ExtResource( 12 ), ExtResource( 35 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 41 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "bobAway"
+length = 0.8
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 27 ), ExtResource( 25 ), ExtResource( 17 ), ExtResource( 28 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 27 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "bobAwayAlt"
+length = 0.8
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 27 ), ExtResource( 25 ), ExtResource( 17 ), ExtResource( 28 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "bread"
+length = 0.001
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 49 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "getarm"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15, 0.175, 0.2, 0.225, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 45 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 31 ), ExtResource( 39 ), ExtResource( 34 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 36 ), ExtResource( 30 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "lastLimbs"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 51 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "look up"
+length = 0.45
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 44 ), ExtResource( 6 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "pog"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 47 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "pogogg"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 67 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "sad"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 9 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "shakey"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 23 ), ExtResource( 14 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 23 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "talk"
+length = 0.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 40 ), ExtResource( 22 ), ExtResource( 40 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "talkBread"
+length = 0.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 49 ), ExtResource( 52 ), ExtResource( 49 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "talkFinal"
+length = 0.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 54 ), ExtResource( 53 ), ExtResource( 54 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "talkLookDown"
+length = 0.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ), ExtResource( 32 ), ExtResource( 37 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "woaw"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 50 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "yipee"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 46 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "bread"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 65 ), ExtResource( 57 ), ExtResource( 66 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 56 ), ExtResource( 60 ), ExtResource( 64 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="Cutscene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+rect_pivot_offset = Vector2( -18, 422 )
+expand = true
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+anims/bob = SubResource( 4 )
+anims/bobAway = SubResource( 5 )
+anims/bobAwayAlt = SubResource( 6 )
+anims/bread = SubResource( 15 )
+anims/getarm = SubResource( 7 )
+anims/lastLimbs = SubResource( 16 )
+"anims/look up" = SubResource( 8 )
+anims/pog = SubResource( 9 )
+anims/pogogg = SubResource( 21 )
+anims/sad = SubResource( 10 )
+anims/shakey = SubResource( 11 )
+anims/talk = SubResource( 12 )
+anims/talkBread = SubResource( 17 )
+anims/talkFinal = SubResource( 18 )
+anims/talkLookDown = SubResource( 13 )
+anims/woaw = SubResource( 19 )
+anims/yipee = SubResource( 14 )
+script = ExtResource( 2 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+rect_pivot_offset = Vector2( -18, 422 )
+expand = true
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect2"]
+anims/bread = SubResource( 20 )
+
+[node name="Paper" type="TextureRect" parent="."]
+visible = false
+margin_right = 640.0
+margin_bottom = 360.0
+rect_pivot_offset = Vector2( -18, 422 )
+texture = ExtResource( 33 )
+expand = true
+script = ExtResource( 4 )
+
+[node name="CCLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_bottom = -26.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+autowrap = true
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="CCLabel"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.509804 )
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 48 )
+volume_db = 10.0
+
+[node name="Rise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 55 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )

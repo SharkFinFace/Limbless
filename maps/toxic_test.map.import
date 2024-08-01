@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/toxic_test.map-e02496db5d0a192a87550462039f3b09.tres"
+
+[deps]
+
+source_file="res://maps/toxic_test.map"
+dest_files=[ "res://.import/toxic_test.map-e02496db5d0a192a87550462039f3b09.tres" ]
+
+[params]
+

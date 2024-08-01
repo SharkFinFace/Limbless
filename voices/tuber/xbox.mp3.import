@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/xbox.mp3-9e1e799ebbf7f1c98c6e5d9ff37c5147.mp3str"
+
+[deps]
+
+source_file="res://voices/tuber/xbox.mp3"
+dest_files=[ "res://.import/xbox.mp3-9e1e799ebbf7f1c98c6e5d9ff37c5147.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

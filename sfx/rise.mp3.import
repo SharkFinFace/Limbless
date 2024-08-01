@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/rise.mp3-d6e21cf2d0b491c9e613c1c733531619.mp3str"
+
+[deps]
+
+source_file="res://sfx/rise.mp3"
+dest_files=[ "res://.import/rise.mp3-d6e21cf2d0b491c9e613c1c733531619.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
