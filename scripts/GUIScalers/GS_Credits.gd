@@ -50,7 +50,7 @@ func _ready():
 	get_node("/root/Control/Label2").visible = true
 	yield(get_tree().create_timer(2), "timeout")
 	
-	text = "Music Makers:\n\n\n\nOh, and the Fella did the title theme."
+	text = "Music Makers:\n\n\n\nOh, and The Fella did the title theme."
 	yield(get_tree().create_timer(5), "timeout")
 	
 	get_node("/root/Control/Label2").visible = false
@@ -64,8 +64,11 @@ func _ready():
 	yield(get_tree().create_timer(1), "timeout")
 	
 	text = 'Everything else:\n\n\n\n"The amount of stress I managed to accumulate is immeasurable."\n- SharkFinFace'
-	
 	yield(get_tree().create_timer(5), "timeout")
+	
+	get_node("AnimationPlayer").play("fadeOut")
+	yield(get_tree().create_timer(5), "timeout")
+	
 	get_tree().change_scene("res://scenes/just_the_beginning.tscn")
 	pass # Replace with function body.
 

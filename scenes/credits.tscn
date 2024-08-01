@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/GUIScalers/GS_TitleCredits.gd" type="Script" id=1]
 [ext_resource path="res://tunes/Scrolling.mp3" type="AudioStream" id=2]
@@ -9,6 +9,34 @@
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "fadeOut"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../ColorRect2:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../AudioStreamPlayer:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -7.0, -80.0 ]
+}
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 5 )
@@ -46,6 +74,9 @@ align = 1
 autowrap = true
 script = ExtResource( 4 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+anims/fadeOut = SubResource( 3 )
+
 [node name="Label2" type="Label" parent="."]
 visible = false
 anchor_right = 1.0
@@ -69,3 +100,8 @@ SharkFinFace"
 align = 1
 autowrap = true
 script = ExtResource( 6 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
