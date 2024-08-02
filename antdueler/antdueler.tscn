@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://antdueler/ADCriminalSpriteAnimator.gd" type="Script" id=1]
 [ext_resource path="res://antdueler/GS_ADCriminal.gd" type="Script" id=2]
@@ -46,6 +46,8 @@
 [ext_resource path="res://antdueler/healthbar/healthbar_10.png" type="Texture" id=44]
 [ext_resource path="res://antdueler/antdueler_boot.tscn" type="PackedScene" id=45]
 [ext_resource path="res://scripts/preloads/PreloadAntdueler.gd" type="Script" id=46]
+[ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=47]
+[ext_resource path="res://scripts/GUIScalers/GS_InteractionLabel.gd" type="Script" id=48]
 
 [sub_resource type="Animation" id=3]
 resource_name = "attack"
@@ -96,6 +98,11 @@ tracks/0/keys = {
 "update": 1,
 "values": [ ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
 }
+
+[sub_resource type="DynamicFont" id=17]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 47 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "five"
@@ -347,6 +354,17 @@ script = ExtResource( 11 )
 
 [node name="Node" type="Node" parent="Attack"]
 script = ExtResource( 16 )
+
+[node name="Hint" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_bottom = -24.0
+custom_fonts/font = SubResource( 17 )
+text = "
+  Press Space, Enter, or Z to attack."
+script = ExtResource( 48 )
 
 [node name="RevealPlane" type="ColorRect" parent="."]
 anchor_top = 0.55

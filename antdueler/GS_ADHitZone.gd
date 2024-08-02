@@ -15,7 +15,7 @@ func _ready():
 func _process(_delta):
 	# Your norm GS
 	rect_size = Vector2(OS.window_size.y/4/2,OS.window_size.y/4)
-	rect_position = Vector2((OS.window_size.x-get_width_from_height(OS.window_size.y/3)/.9),OS.window_size.y*3/5)
+	rect_position = Vector2((OS.window_size.x/2-rect_size.x/2),OS.window_size.y*3/5)
 	
 	# Zone detection
 	var hit_zone = get_parent().get_node("HitZone")
