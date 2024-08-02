@@ -3706,7 +3706,7 @@ stream = ExtResource( 23 )
 volume_db = -80.0
 autoplay = true
 script = ExtResource( 10 )
-goalDB = -18
+goalDB = -14
 factor = 1.0
 
 [node name="AudioStreamPlayerOcean" type="AudioStreamPlayer" parent="."]
@@ -3714,7 +3714,7 @@ stream = ExtResource( 31 )
 volume_db = -80.0
 autoplay = true
 script = ExtResource( 10 )
-goalDB = -14
+goalDB = -18
 factor = 1.0
 
 [node name="Door" parent="." instance=ExtResource( 6 )]

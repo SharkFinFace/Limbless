@@ -3527,7 +3527,7 @@ factor = 1.0
 
 [node name="AudioStreamPlayerOcean" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 26 )
-volume_db = -18.0
+volume_db = -80.0
 autoplay = true
 script = ExtResource( 27 )
 goalDB = -18
