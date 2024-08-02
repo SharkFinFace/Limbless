@@ -31,7 +31,7 @@ func _process(delta):
 			toxic.visible = false
 			interact()
 	
-	if !get_node_or_null("/root/Spatial/LegInteract"):
+	if get_node_or_null("/root/Spatial/limbless") == null:
 		if playerNode.translation.y < 15:
 			
 			toxic.visible = true

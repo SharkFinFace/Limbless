@@ -2669,7 +2669,7 @@ script = ExtResource( 55 )
 [node name="Temple" type="Spatial" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 script = ExtResource( 11 )
-map_file = "maps/agua_temp_le.map"
+map_file = "maps/agua_temple.map"
 inverse_scale_factor = 16.0
 entity_fgd = ExtResource( 1 )
 base_texture_dir = "res://maps/textures"
