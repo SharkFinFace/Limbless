@@ -1,13 +1,11 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=1]
 [ext_resource path="res://maps/textures/train_window_edge.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Animators/AutoplayAnimation.gd" type="Script" id=3]
 [ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://scripts/GUIScalers/GS_Begin.gd" type="Script" id=5]
-[ext_resource path="res://scripts/GUIScalers/GS_Settings.gd" type="Script" id=6]
+[ext_resource path="res://scripts/GUIScalers/GS_MenuButton.gd" type="Script" id=5]
 [ext_resource path="res://maps/textures/train_door.png" type="Texture" id=7]
-[ext_resource path="res://scripts/GUIScalers/GS_Quit.gd" type="Script" id=8]
 [ext_resource path="res://maps/textures/train_window.png" type="Texture" id=9]
 [ext_resource path="res://limbless_title.png" type="Texture" id=10]
 [ext_resource path="res://scripts/GUIScalers/GS_Title.gd" type="Script" id=11]
@@ -16,7 +14,6 @@
 [ext_resource path="res://scripts/UnlockMouse.gd" type="Script" id=14]
 [ext_resource path="res://maps/textures/train_wall.png" type="Texture" id=15]
 [ext_resource path="res://maps/textures/escalator_conveyer.png" type="Texture" id=17]
-
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -239,7 +236,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=37]
 resource_name = "fadeOut"
-length = 3.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
@@ -263,6 +260,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../AudioStreamPlayer:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -12.0, -80.0 ]
 }
 
 [node name="Spatial" type="Spatial"]
@@ -385,38 +394,65 @@ expand = true
 script = ExtResource( 11 )
 
 [node name="Begin" type="Button" parent="."]
-margin_top = 190.0
+margin_top = 128.0
 margin_right = 218.0
-margin_bottom = 212.0
+margin_bottom = 150.0
 custom_fonts/font = SubResource( 32 )
 custom_styles/focus = SubResource( 34 )
 text = "Begin"
 flat = true
 align = 0
 script = ExtResource( 5 )
+row = 6.0
 
 [node name="Settings" type="Button" parent="."]
-margin_top = 209.0
+margin_top = 147.0
 margin_right = 218.0
-margin_bottom = 231.0
+margin_bottom = 169.0
 custom_fonts/font = SubResource( 32 )
 custom_styles/focus = SubResource( 35 )
 disabled = true
 text = "Settings"
 flat = true
 align = 0
-script = ExtResource( 6 )
+script = ExtResource( 5 )
+row = 7.0
 
 [node name="Quit" type="Button" parent="."]
-margin_top = 247.0
+margin_top = 185.0
 margin_right = 218.0
-margin_bottom = 269.0
+margin_bottom = 207.0
 custom_fonts/font = SubResource( 32 )
 custom_styles/focus = SubResource( 36 )
 text = "Quit"
 flat = true
 align = 0
-script = ExtResource( 8 )
+script = ExtResource( 5 )
+row = 8.5
+
+[node name="Discord" type="Button" parent="."]
+margin_top = 247.0
+margin_right = 218.0
+margin_bottom = 269.0
+custom_fonts/font = SubResource( 32 )
+custom_styles/focus = SubResource( 36 )
+text = "Discord"
+flat = true
+align = 0
+script = ExtResource( 5 )
+row = 12.0
+
+[node name="Credits" type="Button" parent="."]
+margin_top = 229.0
+margin_right = 218.0
+margin_bottom = 251.0
+custom_fonts/font = SubResource( 32 )
+custom_styles/focus = SubResource( 36 )
+text = "End Credits"
+flat = true
+align = 0
+script = ExtResource( 5 )
+row = 11.0
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -436,3 +472,5 @@ autoplay = true
 
 [connection signal="pressed" from="Begin" to="Begin" method="_on_Begin_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]
+[connection signal="pressed" from="Discord" to="Discord" method="_on_Discord_pressed"]
+[connection signal="pressed" from="Credits" to="Credits" method="_on_Credits_pressed"]
