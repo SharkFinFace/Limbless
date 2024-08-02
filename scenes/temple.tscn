@@ -16989,7 +16989,7 @@ visible = false
 mesh = SubResource( 1726 )
 
 [node name="StaticBody" type="StaticBody" parent="valveInteract"]
-collision_layer = 3
+collision_layer = 2
 script = ExtResource( 41 )
 
 [node name="CollisionShape" type="CollisionShape" parent="valveInteract/StaticBody"]

@@ -83,3 +83,4 @@ func unSetup():
 	playerNode.jump_action = "player_jump"
 	
 	damageEnabled = true
+	self.collision_layer = 0
