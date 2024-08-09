@@ -1,0 +1,6 @@
+# License
+All custom code under GPL v3. Users are free to use, share, and modify code to use in their own projects without the need of credit.  
+I cannot license assets such as plugins used in this project, as those are under their respective licenses.  
+The custom assets and characters of Limbless are licensed under the CC BY-NC-ND 4.0. Users are permitted to use and modify these assets for creative works related to Limbless (e.g., animations, art, etc.), provided that proper credit is given. Users may profit indirectly from their creative works (e.g., YouTube ad revenue), but they are not allowed to charge a fee for the viewing, usage, or download of these works. Additionally, characters from Limbless must not be used in projects unrelated to Limbless without prior permission from the original creator of the character in question.  
+I, SharkFinFace, the licensor, reserve the right to grant exceptions or additional permissions. For instance, the permision of YouTube ad revenue. To recieve additional permissions, please contact.  
+I cannot license assets not made for this game, as those are under their respective licenses.
