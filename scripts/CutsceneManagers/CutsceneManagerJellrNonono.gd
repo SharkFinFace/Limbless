@@ -35,7 +35,7 @@ func _ready():
 #	play("welcome")
 	yield(get_tree().create_timer(2.075), "timeout")
 	
-	CCLabel.text = "KING SIMON's GONNA BE FURIOUS!"
+	CCLabel.text = "KING SIMON'S GONNA BE FURIOUS!"
 #	play("yeah")
 	yield(get_tree().create_timer(1.72), "timeout")
 	

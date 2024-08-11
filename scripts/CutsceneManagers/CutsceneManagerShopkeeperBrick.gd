@@ -47,7 +47,7 @@ func _ready():
 	CCLabel.text = "Ah ha..."
 	yield(get_tree().create_timer(0.96), "timeout")
 	
-	CCLabel.text = "Is that a brick see?"
+	CCLabel.text = "Is that a brick I see?"
 	yield(get_tree().create_timer(2.574 - 0.72), "timeout") # 0.72 length of video
 	yield(get_tree().create_timer(0.075), "timeout")
 	BrickPlayer.paused = false
