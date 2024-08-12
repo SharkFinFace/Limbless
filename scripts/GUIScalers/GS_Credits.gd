@@ -17,31 +17,31 @@ func _ready():
 	text = "Voices:\n"
 	yield(get_tree().create_timer(1), "timeout")
 
-	text = "Voices:\nOtis (old man) - The Fella"
+	text = "Voices:\nOtis (old man) - PiratePugPants"
 	yield(get_tree().create_timer(1), "timeout")
 
-	text = "Voices:\nOtis (old man) - The Fella\nMr. Crimal - SharkFinFace"
+	text = "Voices:\nOtis (old man) - PiratePugPants\nMr. Crimal - SharkFinFace"
 	yield(get_tree().create_timer(1), "timeout")
 
-	text = "Voices:\nOtis (old man) - The Fella\nMr. Crimal - SharkFinFace\nViolet (jellyfish girl) - FlowerPowerJedi"
+	text = "Voices:\nOtis (old man) - PiratePugPants\nMr. Crimal - SharkFinFace\nViolet (jellyfish girl) - FlowerPowerJedi"
 	yield(get_tree().create_timer(1), "timeout")
 
-	text = "Voices:\nOtis (old man) - The Fella\nMr. Crimal - SharkFinFace\nViolet (jellyfish girl) - FlowerPowerJedi\nGumless Steven (shopkeeper) - The Fella"
+	text = "Voices:\nOtis (old man) - PiratePugPants\nMr. Crimal - SharkFinFace\nViolet (jellyfish girl) - FlowerPowerJedi\nGumless Steven (shopkeeper) - PiratePugPants"
 	yield(get_tree().create_timer(1), "timeout")
 
-	text = "Voices:\nOtis (old man) - The Fella\nMr. Crimal - SharkFinFace\nViolet (jellyfish girl) - FlowerPowerJedi\nGumless Steven (shopkeeper) - The Fella\nCOOLCHUMLY985 (YouTuber) - ImSpooky"
+	text = "Voices:\nOtis (old man) - PiratePugPants\nMr. Crimal - SharkFinFace\nViolet (jellyfish girl) - FlowerPowerJedi\nGumless Steven (shopkeeper) - PiratePugPants\nCOOLCHUMLY985 (YouTuber) - ImSpooky"
 	yield(get_tree().create_timer(5), "timeout")
 
 	text = "Character Designers:"
 	yield(get_tree().create_timer(1), "timeout")
 
-	text = "Character Designers:\nThe Fella"
+	text = "Character Designers:\nPiratePugPants"
 	yield(get_tree().create_timer(1), "timeout")
 
-	text = "Character Designers:\nThe Fella\nSharkFinFace"
+	text = "Character Designers:\nPiratePugPants\nSharkFinFace"
 	yield(get_tree().create_timer(1), "timeout")
 
-	text = "Character Designers:\nThe Fella\nSharkFinFace\nImSpooky"
+	text = "Character Designers:\nPiratePugPants\nSharkFinFace\nImSpooky"
 	yield(get_tree().create_timer(3), "timeout")
 	
 	text = "Music Makers:"
@@ -50,7 +50,7 @@ func _ready():
 	get_node("/root/Control/Label2").visible = true
 	yield(get_tree().create_timer(2), "timeout")
 	
-	text = "Music Makers:\n\n\n\nOh, and The Fella did the title theme."
+	text = "Music Makers:\n\n\n\nOh, and PiratePugPants did the title theme."
 	yield(get_tree().create_timer(5), "timeout")
 	
 	get_node("/root/Control/Label2").visible = false
