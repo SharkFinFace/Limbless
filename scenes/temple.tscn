@@ -4238,6 +4238,9 @@ max_speed = 0.0
 jump_action = "nil_action"
 target_yaw_pitch = Vector2( -3.14, 0 )
 
+[node name="Camera" parent="Player" index="4"]
+far = 126.0
+
 [node name="ShaderCache" parent="Player/Camera" index="1" instance=ExtResource( 64 )]
 transform = Transform( 0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, 0, 0, -0.5 )
 
