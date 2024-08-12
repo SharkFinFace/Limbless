@@ -1330,27 +1330,19 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2, 2.75, -13.5 )
 skeleton = NodePath("../..")
 
 [node name="Seat21" parent="Seats" instance=ExtResource( 27 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -1.5 )
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, 0.5 )
 skeleton = NodePath("../..")
 
 [node name="Seat43" parent="Seats" instance=ExtResource( 27 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -3.5 )
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -1.5 )
 skeleton = NodePath("../..")
 
 [node name="Seat44" parent="Seats" instance=ExtResource( 27 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -2.5 )
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -0.5 )
 skeleton = NodePath("../..")
 
 [node name="Seat22" parent="Seats" instance=ExtResource( 27 )]
 transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, 1.5 )
-skeleton = NodePath("../..")
-
-[node name="Seat23" parent="Seats" instance=ExtResource( 27 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, 2.5 )
-skeleton = NodePath("../..")
-
-[node name="Seat24" parent="Seats" instance=ExtResource( 27 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, 3.5 )
 skeleton = NodePath("../..")
 
 [node name="Seat25" parent="Seats" instance=ExtResource( 27 )]
@@ -1359,6 +1351,14 @@ skeleton = NodePath("../..")
 
 [node name="Seat26" parent="Seats" instance=ExtResource( 27 )]
 transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, 7.5 )
+skeleton = NodePath("../..")
+
+[node name="Seat27" parent="Seats" instance=ExtResource( 27 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, 9.5 )
+skeleton = NodePath("../..")
+
+[node name="Seat28" parent="Seats" instance=ExtResource( 27 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, 8.5 )
 skeleton = NodePath("../..")
 
 [node name="Seat29" parent="Seats" instance=ExtResource( 27 )]
@@ -1377,20 +1377,28 @@ skeleton = NodePath("../..")
 transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, 13.5 )
 skeleton = NodePath("../..")
 
-[node name="Seat33" parent="Seats" instance=ExtResource( 27 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -6.5 )
-skeleton = NodePath("../..")
-
-[node name="Seat34" parent="Seats" instance=ExtResource( 27 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -7.5 )
-skeleton = NodePath("../..")
-
 [node name="Seat35" parent="Seats" instance=ExtResource( 27 )]
 transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -8.5 )
 skeleton = NodePath("../..")
 
 [node name="Seat36" parent="Seats" instance=ExtResource( 27 )]
 transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -2, 2.75, -9.5 )
+skeleton = NodePath("../..")
+
+[node name="Seat41" parent="Seats" instance=ExtResource( 27 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 2, 2.75, -6.5 )
+skeleton = NodePath("../..")
+
+[node name="Seat42" parent="Seats" instance=ExtResource( 27 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 2, 2.75, -7.5 )
+skeleton = NodePath("../..")
+
+[node name="Seat45" parent="Seats" instance=ExtResource( 27 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 2, 2.75, -8.5 )
+skeleton = NodePath("../..")
+
+[node name="Seat46" parent="Seats" instance=ExtResource( 27 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 2, 2.75, -9.5 )
 skeleton = NodePath("../..")
 
 [node name="Seat37" parent="Seats" instance=ExtResource( 27 )]
@@ -1420,19 +1428,19 @@ volume_db = -5.0
 [node name="Generics" type="Spatial" parent="."]
 
 [node name="GenericSitting" parent="Generics" instance=ExtResource( 28 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.15, 3, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.15, 3, -3 )
 
 [node name="GenericSitting2" parent="Generics" instance=ExtResource( 28 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.15, 3, -7 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.15, 3, -7 )
 
 [node name="GenericSitting3" parent="Generics" instance=ExtResource( 28 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.15, 3, -9 )
-
-[node name="GenericSitting4" parent="Generics" instance=ExtResource( 28 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.15, 3, 3 )
 
+[node name="GenericSitting4" parent="Generics" instance=ExtResource( 28 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.15, 3, 3 )
+
 [node name="GenericSitting5" parent="Generics" instance=ExtResource( 28 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.15, 3, 9 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.15, 3, -7 )
 
 [node name="Cutscene" parent="." instance=ExtResource( 29 )]
 
