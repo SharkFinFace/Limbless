@@ -28,7 +28,10 @@ func timer():
 #		print("This is loop number ", i + 1)
 #		print(text)
 		timeLeft -= 1
-		text = str(timeLeft) + "\n(The editor will add epic music in post.)"
+		if timeLeft > 170:
+			text = str(timeLeft) + "\n(The editor will add epic music in post.)"
+		else:
+			text = str(timeLeft)
 		if timeLeft == -1 and !bricked:
 			visible = false
 			text = str(timeLeft)
