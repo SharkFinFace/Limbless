@@ -6,6 +6,7 @@ onready var scorekeeper = get_node("/root/Control")
 
 onready var successSound = get_node("/root/Control/success")
 onready var notSuccessSound = get_node("/root/Control/wompwomp")
+onready var hint = get_node("/root/Control/Hint")
 #onready var successSound = get_node("/root/Control/success")
 
 # Declare member variables here. Examples:
@@ -24,6 +25,8 @@ func _process(_delta):
 	if AttackGraphic.hit == "true":
 		AttackGraphic.hit = "null"
 		print("sucess")
+		if get_node_or_null("/root/Control/Hint") != null:
+			hint.queue_free()
 		scorekeeper.healthEnemy -= 1
 		successSound.play()
 		play("owie")
