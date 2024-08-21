@@ -9,7 +9,7 @@ extends Label
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	yield(get_tree().create_timer(3.449), "timeout")
-	get_node("/root/Control/Title").visible = true
+	get_node("/root/NoPause/Title").visible = true
 	
 #	text = ""
 	yield(get_tree().create_timer(2), "timeout")
@@ -47,17 +47,17 @@ func _ready():
 	text = "Music Makers:"
 	yield(get_tree().create_timer(1), "timeout")
 	
-	get_node("/root/Control/Label2").visible = true
+	get_node("/root/NoPause/Label2").visible = true
 	yield(get_tree().create_timer(2), "timeout")
 	
 	text = "Music Makers:\n\n\n\nOh, and PiratePugPants did the title theme."
 	yield(get_tree().create_timer(5), "timeout")
 	
-	get_node("/root/Control/Label2").visible = false
+	get_node("/root/NoPause/Label2").visible = false
 	text = "Everything else:"
 	yield(get_tree().create_timer(1), "timeout")
 	
-	get_node("/root/Control/Label3").visible = true
+	get_node("/root/NoPause/Label3").visible = true
 	yield(get_tree().create_timer(2), "timeout")
 	
 	text = 'Everything else:\n\n\n\n"The amount of stress I managed to accumulate is immeasurable."'

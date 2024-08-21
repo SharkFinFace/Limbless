@@ -305,6 +305,8 @@ config/icon="res://icon.png"
 
 FPSGraphOverlay="*res://addons/fps_graph_overlay/FPSGraphOverlay.tscn"
 ShaderCacheManager="*res://addons/gd-shader-cache/src/ShaderCacheManager.gd"
+PauseMenu="*res://prefabs/pauseMenu.tscn"
+SettingVariables="*res://scripts/SettingVariables.gd"
 
 [display]
 

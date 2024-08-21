@@ -88,6 +88,9 @@ func handle_input():
 	self.target_velocity += Vector3.RIGHT*planar_velocity.x + Vector3.FORWARD*planar_velocity.y;
 
 func handle_movement(delta):
+	if delta == 0:
+		return
+	
 	#up-down movement
 	if self.on_floor:
 		var displacement_correction = self.mass*(leg_default_length - self.floor_distance)/delta
