@@ -50,7 +50,7 @@ func _ready():
 	get_node("/root/NoPause/Label2").visible = true
 	yield(get_tree().create_timer(2), "timeout")
 	
-	text = "Music Makers:\n\n\n\nOh, and PiratePugPants did the title theme."
+	text = "Music Makers:\n\n\n\nOh, and Pug did the title theme."
 	yield(get_tree().create_timer(5), "timeout")
 	
 	get_node("/root/NoPause/Label2").visible = false
