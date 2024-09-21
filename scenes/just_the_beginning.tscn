@@ -1,10 +1,11 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=1]
 [ext_resource path="res://maps/textures/train_window_edge.png" type="Texture" id=2]
 [ext_resource path="res://scripts/Animators/AutoplayAnimation.gd" type="Script" id=3]
 [ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scripts/GUIScalers/GS_MenuButton.gd" type="Script" id=5]
+[ext_resource path="res://tmpman.png" type="Texture" id=6]
 [ext_resource path="res://maps/textures/train_door.png" type="Texture" id=7]
 [ext_resource path="res://maps/textures/train_window.png" type="Texture" id=9]
 [ext_resource path="res://limbless_title.png" type="Texture" id=10]
@@ -274,6 +275,16 @@ tracks/2/keys = {
 "values": [ -12.0, -80.0 ]
 }
 
+[sub_resource type="SpatialMaterial" id=2664]
+params_billboard_mode = 2
+params_use_alpha_scissor = true
+params_alpha_scissor_threshold = 0.98
+albedo_texture = ExtResource( 6 )
+
+[sub_resource type="QuadMesh" id=2665]
+material = SubResource( 2664 )
+size = Vector2( 2, 4 )
+
 [node name="NoPause" type="Spatial"]
 script = ExtResource( 14 )
 
@@ -469,6 +480,11 @@ animationName = "fadeIn"
 stream = ExtResource( 13 )
 volume_db = -12.0
 autoplay = true
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -14.5 )
+cast_shadow = 0
+mesh = SubResource( 2665 )
 
 [connection signal="pressed" from="Begin" to="Begin" method="_on_Begin_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]
