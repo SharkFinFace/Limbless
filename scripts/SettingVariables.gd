@@ -1,18 +1,39 @@
 extends Node
 
-
 export var pauseDisabled = false
+const settingsConfig = "user://limbless.sav"
+var data = {}
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var defaultSettings = {
+	"sensitivity": 1.0,
+}
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	load_data()
+	if data == null:
+		print("Corrupted config. Defaulting all settings.")
+		default_settings()
+	print(data["sensitivity"])
 
+func save_data():
+	var file = File.new()
+	file.open(settingsConfig, file.WRITE)
+	file.store_var(data)
+	file.close()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func load_data():
+	var file = File.new()
+	if not file.file_exists(settingsConfig):
+		print("Config not found. Creating default settings.")
+		data = defaultSettings
+		save_data()
+	file.open(settingsConfig, File.READ)
+	data = file.get_var()
+	file.close()
+	print("Config loaded.")
+
+func default_settings():
+	var file = File.new()
+	data = defaultSettings
+	save_data()
+	load_data()

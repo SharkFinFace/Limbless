@@ -1,6 +1,6 @@
 extends RigidBody
 
-export var mouse_sensitivity : Vector2 = Vector2(1, 1) 
+var mouse_sensitivity : Vector2 = Vector2(1, 1) 
 export(float, 0.0, 1.0) var mouse_acceleration : float = 0.5 
 
 export var max_speed = 5.0
@@ -39,6 +39,10 @@ var floor_distance : float = 0.0
 var is_jumping : bool = false
 
 func _ready():
+	# Load sensitivity from config.
+	mouse_sensitivity = Vector2(SettingVariables.data["sensitivity"]/10,SettingVariables.data["sensitivity"]/10)
+	# Wonder why it's divided by 10? Cus default sensitivity was supposed to be 0.1 but who wants to see their default setting as 0.1? lol
+	
 	$Camera.fov = default_fov
 	if self.mouse_start_captured:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
