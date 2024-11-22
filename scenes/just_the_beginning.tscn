@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=1]
 [ext_resource path="res://maps/textures/train_window_edge.png" type="Texture" id=2]
@@ -207,6 +207,11 @@ font_data = ExtResource( 4 )
 [sub_resource type="StyleBoxEmpty" id=35]
 
 [sub_resource type="StyleBoxEmpty" id=36]
+
+[sub_resource type="DynamicFont" id=2666]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=33]
 resource_name = "fadeIn"
@@ -465,6 +470,25 @@ align = 0
 script = ExtResource( 5 )
 row = 11.0
 
+[node name="Version" type="Button" parent="."]
+margin_left = 412.0
+margin_top = 327.0
+margin_right = 630.0
+margin_bottom = 349.0
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2666 )
+custom_styles/focus = SubResource( 36 )
+text = "1.1.0"
+flat = true
+align = 2
+script = ExtResource( 5 )
+row = 15.0
+allignment_l_or_r = "R"
+is_version_checker = true
+
 [node name="ColorRect2" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -490,3 +514,4 @@ mesh = SubResource( 2665 )
 [connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]
 [connection signal="pressed" from="Discord" to="Discord" method="_on_Discord_pressed"]
 [connection signal="pressed" from="Credits" to="Credits" method="_on_Credits_pressed"]
+[connection signal="pressed" from="Version" to="Version" method="_on_Version_pressed"]
