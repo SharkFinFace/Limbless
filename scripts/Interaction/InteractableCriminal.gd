@@ -18,6 +18,7 @@ func interact():
 		var scene_instance = scene.instance()
 		scene_instance.set_name("scene")
 		add_child(scene_instance)
+		SettingVariables.can_pause = false
 
 func _process(delta):
 	var limblessCol = get_node_or_null("/root/Spatial/NPC")

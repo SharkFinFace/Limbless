@@ -40,6 +40,7 @@ func _process(_delta):
 func _on_Begin_pressed():
 	get_parent().get_node("ColorRect2/AnimationPlayer").play("fadeOut")
 	fadingOut = true
+	SettingVariables.can_pause = false
 	
 	
 	yield(get_tree().create_timer(5), "timeout")

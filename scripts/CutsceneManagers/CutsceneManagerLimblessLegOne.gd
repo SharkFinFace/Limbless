@@ -110,6 +110,7 @@ func unSetup():
 #	playerNode.jump_speed = playerJSpeed
 #	playerNode.jump_action = "player_jump"
 #	Door.collision_layer = 2
+	SettingVariables.can_pause = true
 	get_parent().get_parent().visible = false
 	yield(get_tree().create_timer(0.5), "timeout")
 	bmasSit.play()

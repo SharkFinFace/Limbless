@@ -65,9 +65,11 @@ func setup():
 	playerNode.max_speed = 0
 	playerNode.jump_speed = 0
 	playerNode.jump_action = "nil_action"
+	SettingVariables.can_pause = false
 
 func unSetup():
 	InteractRaycast.enabled = true
 	playerNode.max_speed = playerSpeed
 	playerNode.jump_speed = playerJSpeed
 	playerNode.jump_action = "player_jump"
+	SettingVariables.can_pause = true

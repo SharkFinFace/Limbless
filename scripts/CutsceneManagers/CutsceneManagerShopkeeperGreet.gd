@@ -190,3 +190,4 @@ func unSetup():
 	playerNode.max_speed = playerSpeed
 	playerNode.jump_speed = playerJSpeed
 	playerNode.jump_action = "player_jump"
+	SettingVariables.can_pause = true

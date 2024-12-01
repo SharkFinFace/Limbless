@@ -1256,6 +1256,8 @@ root_node = NodePath("../../ColorRect2")
 anims/fadein = SubResource( 1197 )
 script = ExtResource( 13 )
 animationName = "fadein"
+changesPauseStatus = true
+can_pause = true
 
 [node name="sit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )

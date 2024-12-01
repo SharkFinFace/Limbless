@@ -10,6 +10,7 @@ func get_interaction_text():
 
 func interact():
 	print("Interacted with %s" % name)
+	SettingVariables.can_pause = false
 	if get_node_or_null("/root/Spatial/Brick/brick"):
 		var scene_instance = scene.instance()
 		scene_instance.set_name("scene")

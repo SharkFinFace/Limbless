@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	var collider = get_collider()
 	
-	if is_colliding():
+	if is_colliding() and SettingVariables.is_paused == false: # I am the ultimate bug smasher!! "What are you getting on the test"? "A HUNDRE-"
 		if collider is Interactable or collider is InteractableLimblessFoundMe or collider is InteractableDoor or collider is InteractableSeat or collider is InteractableShopkeeperGreet or collider is InteractableValve or collider is InteractableLegOne or collider is InteractableJellrGreet or collider is InteractableEscalatorOne or collider is InteractableBrick or collider is InteractableTuberGreet or collider is InteractablePuter or collider is InteractableTuberWin or collider is InteractableArmTwo or collider is InteractableLimblessFinal:
 			if current_collider != collider:
 				set_interaction_text(collider.get_interaction_text())

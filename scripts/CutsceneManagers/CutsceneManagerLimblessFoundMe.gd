@@ -83,3 +83,4 @@ func unSetup():
 	playerNode.jump_speed = playerJSpeed
 	playerNode.jump_action = "player_jump"
 	Door.collision_layer = 2
+	SettingVariables.can_pause = true

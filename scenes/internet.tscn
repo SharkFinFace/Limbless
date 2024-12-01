@@ -3555,6 +3555,8 @@ color = Color( 0.607843, 0.964706, 1, 1 )
 anims/fadein = SubResource( 3632 )
 script = ExtResource( 27 )
 animationName = "fadein"
+changesPauseStatus = true
+can_pause = true
 
 [node name="Timer" type="Label" parent="."]
 visible = false

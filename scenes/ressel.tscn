@@ -28,7 +28,7 @@ outline_color = Color( 0.780392, 0, 0, 1 )
 extra_spacing_top = 1
 font_data = ExtResource( 2 )
 
-[node name="Spatial" type="Control"]
+[node name="NoPause" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 

@@ -74,6 +74,8 @@ func setup():
 	
 	playerNode.target_yaw_pitch = Vector2(0.834, -0.0733)
 	playerNode.translation = Vector3(-31,1,30.5)
+	
+	SettingVariables.can_pause = false
 
 func unSetup():
 	freezeMouse.visible = false
@@ -84,3 +86,5 @@ func unSetup():
 	
 	damageEnabled = true
 	self.collision_layer = 0
+	
+	SettingVariables.can_pause = true

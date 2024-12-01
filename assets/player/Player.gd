@@ -38,6 +38,11 @@ var on_floor : bool = false
 var floor_distance : float = 0.0
 var is_jumping : bool = false
 
+# This function updates mouse_sensitivity since after the variable is established, it becomes static until the next time _ready is called.
+# Honestly, I could just make this function call the _ready function, but I may want to use it for other settings, so it would be better for organization.
+func update_settings():
+	mouse_sensitivity = Vector2(SettingVariables.data["sensitivity"]/10,SettingVariables.data["sensitivity"]/10)
+
 func _ready():
 	# Load sensitivity from config.
 	mouse_sensitivity = Vector2(SettingVariables.data["sensitivity"]/10,SettingVariables.data["sensitivity"]/10)
@@ -54,10 +59,12 @@ func handle_orientation(event : InputEventMouseMotion):
 	self.target_yaw_pitch.y = clamp(self.target_yaw_pitch.y, -PI/2.0, PI/2.0);
 
 func handle_focus(event : InputEvent):
-	if event is InputEventMouseButton and Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+	if event is InputEventMouseButton and Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE and SettingVariables.is_paused == false:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
-	elif event.is_action_pressed(self.uncapture_action) and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+#	elif event.is_action_pressed(self.uncapture_action) and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+#		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+	pass
+	# This function now is handled by pauseMenu.gd
 
 func _unhandled_input(event : InputEvent):
 	self.handle_focus(event);
@@ -125,6 +132,10 @@ func _process(_delta : float):
 	$Camera.rotate_y(self.yaw_pitch.x)
 	
 	$Camera.fov = lerp($Camera.fov, self.target_fov, self.fov_acceleration)
+	
+	# TODO: Idealy, this should be called when the settings are newly saved.
+	# This will suffice for now.
+	update_settings()
 	
 
 func _physics_process(delta):

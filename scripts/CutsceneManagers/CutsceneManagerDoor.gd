@@ -30,6 +30,8 @@ func _ready():
 #	pass
 
 func setup():
+	SettingVariables.can_pause = false
+	
 	InteractRaycast.enabled = false
 	playerNode.max_speed = 0
 	playerNode.jump_speed = 0

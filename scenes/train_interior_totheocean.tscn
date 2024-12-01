@@ -1400,6 +1400,8 @@ root_node = NodePath("../../ColorRect2")
 anims/fadein = SubResource( 1197 )
 script = ExtResource( 18 )
 animationName = "fadein"
+changesPauseStatus = true
+can_pause = true
 
 [node name="limbless" parent="." instance=ExtResource( 24 )]
 transform = Transform( -1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, 2, 2.25, -3 )

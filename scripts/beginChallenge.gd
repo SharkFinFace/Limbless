@@ -23,6 +23,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if !done and playerNode.translation.z <= -39:
+		SettingVariables.can_pause = false
+		
 		ad.visible = true
 		get_node("AudioStreamPlayer").play()
 		done = true
@@ -32,6 +34,8 @@ func _process(delta):
 		
 		MazeGreen.translation.y = -10
 		MazeREAL.translation.y = 0
+		
+		SettingVariables.can_pause = true
 		pass
 		
 	if !doneTwo and playerNode.translation.x >= 107.7 and playerNode.translation.z <= -103.5 and playerNode.translation.z >= -116.5:

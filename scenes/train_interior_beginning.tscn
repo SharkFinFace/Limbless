@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=2]
+[gd_scene load_steps=174 format=2]
 
 [ext_resource path="res://maps/textures/laptop_keyboard.png" type="Texture" id=1]
 [ext_resource path="res://maps/textures/metal_light.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://voices/bmas/bmas_approaching.mp3" type="AudioStream" id=22]
 [ext_resource path="res://voices/bmas/bmas_getout.mp3" type="AudioStream" id=23]
 [ext_resource path="res://scripts/resetSoundDB.gd" type="Script" id=24]
+[ext_resource path="res://scripts/AudioSequence/AS_TrainInteriorBeginning.gd" type="Script" id=25]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -740,7 +741,7 @@ size = Vector2( 2, 4 )
 
 [sub_resource type="Animation" id=1053]
 resource_name = "FadeIn"
-length = 37.0
+length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
@@ -765,92 +766,111 @@ tracks/1/keys = {
 "update": 1,
 "values": [ true, true, false ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("../Player:jump_action")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/keys = {
+
+[sub_resource type="Animation" id=1196]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Door/StaticBody:collision_layer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=1197]
+resource_name = "FadeIn"
+length = 37.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Player:jump_action")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ "nil_action", "player_jump" ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("../Player:max_speed")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Player:max_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 0, 4 ),
 "transitions": PoolRealArray( 1e+06, 1 ),
 "update": 0,
 "values": [ 0.0, 7.0 ]
 }
-tracks/4/type = "value"
-tracks/4/path = NodePath("../Door/StaticBody:collision_layer")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Door/StaticBody:collision_layer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
 "times": PoolRealArray( 0, 37 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 0, 2 ]
 }
-tracks/5/type = "value"
-tracks/5/path = NodePath("../bmas:playing")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
+tracks/3/type = "value"
+tracks/3/path = NodePath("../bmas:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/keys = {
 "times": PoolRealArray( 0, 7, 24, 34 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false, true ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("../screech:playing")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
+tracks/4/type = "value"
+tracks/4/path = NodePath("../screech:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/keys = {
 "times": PoolRealArray( 0, 15.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
 }
-tracks/7/type = "value"
-tracks/7/path = NodePath("../bmas:stream")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
+tracks/5/type = "value"
+tracks/5/path = NodePath("../bmas:stream")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
 "times": PoolRealArray( 0, 33.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 22 ), ExtResource( 23 ) ]
 }
-tracks/8/type = "value"
-tracks/8/path = NodePath("../rumble:volume_db")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
+tracks/6/type = "value"
+tracks/6/path = NodePath("../rumble:volume_db")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
 "times": PoolRealArray( 0, 4, 22, 30.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ -30.0, 0.0, -5.0, -80.0 ]
 }
 
-[sub_resource type="Animation" id=1196]
+[sub_resource type="Animation" id=1198]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("../Door/StaticBody:collision_layer")
@@ -1331,6 +1351,7 @@ autoplay = true
 [node name="bmas" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
 volume_db = -5.0
+script = ExtResource( 25 )
 
 [node name="screech" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
@@ -1344,6 +1365,14 @@ color = Color( 0, 0, 0, 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
 anims/FadeIn = SubResource( 1053 )
 anims/RESET = SubResource( 1196 )
+script = ExtResource( 18 )
+animationName = "FadeIn"
+changesPauseStatus = true
+can_pause = true
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="ColorRect"]
+anims/FadeIn = SubResource( 1197 )
+anims/RESET = SubResource( 1198 )
 script = ExtResource( 18 )
 animationName = "FadeIn"
 

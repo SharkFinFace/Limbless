@@ -1,6 +1,7 @@
 extends Node
 
-export var pauseDisabled = false
+export var can_pause = false
+export var is_paused = false
 const settingsConfig = "user://limbless.sav"
 var data = {}
 
@@ -13,7 +14,7 @@ func _ready():
 	if data == null:
 		print("Corrupted config. Defaulting all settings.")
 		default_settings()
-	print(data["sensitivity"])
+#	print(data["sensitivity"])
 
 func save_data():
 	var file = File.new()

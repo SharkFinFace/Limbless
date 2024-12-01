@@ -39,6 +39,8 @@ func timer():
 			playerNode.yaw_pitch = Vector2(0,0)
 			playerNode.translation = Vector3(48, 33, -96)
 			
+			SettingVariables.can_pause = false
+			
 			get_node("/root/Spatial/AudioStreamPlayer").playing = false
 			get_node("AudioStreamPlayer").play()
 			yield(get_tree().create_timer(20), "timeout")
@@ -51,6 +53,7 @@ func timer():
 			
 			get_node("/root/Spatial/AudioStreamPlayer").playing = true
 #			get_node("/root/AudioStreamPlayer").stream_paused = false
+			SettingVariables.can_pause = true
 			
 			playerNode.target_yaw_pitch = Vector2(0,0)
 			playerNode.yaw_pitch = Vector2(0,0)
