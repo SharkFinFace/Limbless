@@ -53,39 +53,6 @@ func _ready():
 	
 	yield(get_tree().create_timer(2.75), "timeout")
 	get_tree().change_scene("res://antdueler/antdueler.tscn")
-#	AudioPlayer.playing = true
-#	CCLabel.text = "Lad..."
-#	play("shakey")
-#	yield(get_tree().create_timer(1), "timeout")
-#
-#	CCLabel.text = ""
-#	play("look up")
-#	yield(get_tree().create_timer(0.453), "timeout")
-#
-#	CCLabel.text = "LAD! I'VE BEEN ROBBED! MUGGED!"
-#	yield(get_tree().create_timer(0.609), "timeout")
-#
-#	play("bob")
-#	yield(get_tree().create_timer(2.137), "timeout")
-#	CCLabel.text = "They've stolen my limbs. FOR THE FUNNY!"
-#	yield(get_tree().create_timer(3.298), "timeout")
-#	CCLabel.text = "My precious appendages..."
-#	yield(get_tree().create_timer(2.642), "timeout")
-#
-#	play("sad")
-#	CCLabel.text = "I cannot chase after them. I need your help lad!"
-#	yield(get_tree().create_timer(1.914+2.268), "timeout")
-#
-#	play("talk")
-#	CCLabel.text = "Help me get my limbs back so I may return to my former glory as the best baker in this here hamlet!"
-#	yield(get_tree().create_timer(4.484+3.06), "timeout")
-#
-#	CCLabel.text = "As a reward, I will grace you with my FINEST loaf of bread."
-#	yield(get_tree().create_timer(5.05), "timeout")
-#
-#	play("bobAway")
-#	CCLabel.text = "Come lad! Let us make haste!"
-#	yield(get_tree().create_timer(5), "timeout")
 	
 	unSetup()
 	pass # Replace with function body.
