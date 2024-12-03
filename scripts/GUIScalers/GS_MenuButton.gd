@@ -76,17 +76,16 @@ func _on_Version_pressed():
 
 func _on_request_completed(result, response_code, headers, body):
 	if response_code == 200:
-		print(body.get_string_from_utf8())
+		print("Latest version: " + body.get_string_from_utf8())
+		print("Current version: " + self.text)
 		
-
 		if body.get_string_from_utf8() == self.text:
-			print("Latest version.")
+			print("Game is up-to-date.")
 		else:
 			print("Version outdated or error.")
 			incorrect_version()
 	else:
-		print("Failed to load latest version.")
-		print(response_code)
+		print("Failed to load latest version.\nResponse code: " + str(response_code))
 		failed_request()
 
 func incorrect_version():
