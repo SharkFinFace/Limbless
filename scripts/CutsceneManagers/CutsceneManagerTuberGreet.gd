@@ -32,13 +32,13 @@ func _ready():
 	#print("Current max player speed is " + str(playerSpeed) + ". This will be temporarily set to 0.")
 	setup()
 	yield(get_tree().create_timer(0.5), "timeout")
-
-	CCLabel.get_node("ColorRect").visible = true
+	
 	CCLabel.text = ""
 	play("approach")
 	yield(get_tree().create_timer(6.6), "timeout")
 	AudioPlayer.playing = true
 	
+	CCLabel.get_node("ColorRect").visible = true
 	CCLabel.text = "So guys, we did it! We reached a quarter of a subscrib-"
 	play("pyro")
 	yield(get_tree().create_timer(4.08), "timeout")

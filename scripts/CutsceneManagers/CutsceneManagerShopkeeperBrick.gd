@@ -64,7 +64,7 @@ func _ready():
 	CCLabel.text = "Heyyy..."
 	yield(get_tree().create_timer(1.655 - 0.075), "timeout")
 	
-	CCLabel.text = "Hey young maaann..."
+	CCLabel.text = "Hey uhh maaann..."
 	yield(get_tree().create_timer(2.348), "timeout")
 	
 	CCLabel.text = "Heheheh..."

@@ -59,7 +59,7 @@ func _ready():
 	play("earliest")
 	yield(get_tree().create_timer(1.709), "timeout")
 	
-	CCLabel.text = "Earliest I can get you in is... next moon."
+	CCLabel.text = "Earliest I can get you in is...\nnext moon."
 	play("unfortunately")
 	yield(get_tree().create_timer(1.47), "timeout")
 	######
