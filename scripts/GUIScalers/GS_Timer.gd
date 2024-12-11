@@ -17,6 +17,8 @@ export var bricked = false
 var maxTime = 180
 var timeLeft = maxTime
 
+var musicInPostAlreadyDone = false
+
 
 # Called when the node enters the scene tree for the first time.
 func timer():
@@ -24,16 +26,17 @@ func timer():
 	
 	yield(get_tree().create_timer(1), "timeout")
 	for i in range(maxTime + 1):
-		print(bricked)
+#		print(bricked)
 #		print("This is loop number ", i + 1)
 #		print(text)
 		timeLeft -= 1
-		if timeLeft > 170:
+		if timeLeft > 170 and not musicInPostAlreadyDone:
 			text = str(timeLeft) + "\n(The editor will add epic music in post.)"
 		else:
 			text = str(timeLeft)
 		if timeLeft == -1 and !bricked:
 			visible = false
+			musicInPostAlreadyDone = true
 			text = str(timeLeft)
 			playerNode.target_yaw_pitch = Vector2(0,0)
 			playerNode.yaw_pitch = Vector2(0,0)
@@ -58,6 +61,8 @@ func timer():
 			playerNode.target_yaw_pitch = Vector2(0,0)
 			playerNode.yaw_pitch = Vector2(0,0)
 			playerNode.translation = Vector3(50, 0, -28)
+			
+			text = str(maxTime)
 			
 			yield(get_tree().create_timer(0.5), "timeout")
 			
