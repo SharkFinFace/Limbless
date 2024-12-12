@@ -55,14 +55,14 @@ size = Vector2( 4, 4 )
 
 [node name="Cutscene" type="Spatial"]
 
-[node name="ColorRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 640.0
 margin_bottom = 360.0
 rect_pivot_offset = Vector2( -18, 422 )
 expand = true
 script = ExtResource( 5 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
 anims/idle = SubResource( 8 )
 script = ExtResource( 4 )
 
@@ -100,4 +100,4 @@ volume_db = 10.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2.5, 1 )
 cast_shadow = 0
 mesh = SubResource( 6 )
-skeleton = NodePath("../ColorRect")
+skeleton = NodePath("../TextureRect")

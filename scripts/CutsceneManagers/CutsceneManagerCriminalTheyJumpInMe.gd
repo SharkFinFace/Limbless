@@ -45,8 +45,8 @@ func _ready():
 	CCLabel.text = "THERE! THERES ONE OF THEM! HEY! GIMMIE BACK MY LIMBS!"
 	
 	yield(get_tree().create_timer(5.5), "timeout")
-	play("unyell")
-	yield(get_tree().create_timer(0.01), "timeout")
+#	play("unyell")
+#	yield(get_tree().create_timer(0.01), "timeout")
 	play("talker")
 	criminalAudio.playing = true
 	CCLabel.text = "YOU'LL NEVER CATCH ME ALIVE!"
@@ -54,7 +54,7 @@ func _ready():
 	yield(get_tree().create_timer(2.75), "timeout")
 	get_tree().change_scene("res://antdueler/antdueler.tscn")
 	
-	unSetup()
+#	unSetup()
 	pass # Replace with function body.
 
 
