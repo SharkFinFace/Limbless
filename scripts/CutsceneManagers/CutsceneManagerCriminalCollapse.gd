@@ -9,6 +9,7 @@ onready var playerSpeed = 7
 onready var playerJSpeed = 8
 
 onready var AnimPlayer2 = get_parent().get_parent().get_node("LimblessTextureRect/AnimationPlayer")
+onready var AnimPlayer3 = get_parent().get_parent().get_node("LimblessTextureRect2/AnimationPlayer")
 onready var CriminalAudPlayer = get_parent().get_parent().get_node("Criminal")
 onready var LimblessAudPlayer = get_parent().get_parent().get_node("Limbless")
 onready var ClickAudPlayer = get_parent().get_parent().get_node("Click")
@@ -33,10 +34,11 @@ func _ready():
 	CriminalAudPlayer.playing = true
 	yield(get_tree().create_timer(2.9), "timeout")
 	
-	AnimPlayer2.play("getarm")
+	AnimPlayer3.play("getarm")
 	ClickAudPlayer.playing = true
 	yield(get_tree().create_timer(1.3), "timeout")
 	
+	AnimPlayer3.get_parent().visible = false
 	CCLabel.get_node("ColorRect").visible = true
 	
 	AnimPlayer2.play("talk")
