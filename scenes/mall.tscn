@@ -1,4 +1,4 @@
-[gd_scene load_steps=500 format=2]
+[gd_scene load_steps=503 format=2]
 
 [ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=1]
 [ext_resource path="res://maps/textures/water00.png" type="Texture" id=2]
@@ -2269,6 +2269,128 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
+[sub_resource type="Animation" id=4193]
+resource_name = "rumble"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../rumble:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 18, 21 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -80.0, 0.0, 0.0, -80.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../screech:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 18, 21, 25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -10.0, -10.0, -80.0 ]
+}
+
+[sub_resource type="Animation" id=4194]
+resource_name = "sit"
+length = 7.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.1, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Camera:current")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.05 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 7.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Camera:translation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.05, 6, 7.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -1.25, 0.3, 0 ), Vector3( -1.25, 0.3, 0 ), Vector3( -13.25, -5.7, 0 ), Vector3( -16.25, -5.7, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Camera:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4, 7.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -35, 90, 0 ), Vector3( -35, 90, 0 ), Vector3( 0, 90, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4195]
+resource_name = "unSit"
+length = 2.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.1, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
 [sub_resource type="CubeMesh" id=3786]
 
 [sub_resource type="ConcavePolygonShape" id=3787]
@@ -3618,6 +3740,53 @@ volume_db = -80.0
 autoplay = true
 
 [node name="screech" type="AudioStreamPlayer" parent="EscalatorOne2"]
+stream = ExtResource( 62 )
+volume_db = -10.0
+
+[node name="EscalatorOne3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1.4, 109.25, 14, -1.635 )
+visible = false
+mesh = SubResource( 1194 )
+
+[node name="StaticBody" type="StaticBody" parent="EscalatorOne3"]
+collision_layer = 2
+script = ExtResource( 58 )
+duration = 7.1
+newPosition = Vector3( 93, 6, -1.635 )
+newDirection = Vector2( 1.57, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="EscalatorOne3/StaticBody"]
+shape = SubResource( 1195 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EscalatorOne3/StaticBody"]
+anims/rumble = SubResource( 4193 )
+anims/sit = SubResource( 4194 )
+anims/unSit = SubResource( 4195 )
+
+[node name="Camera" type="Camera" parent="EscalatorOne3"]
+transform = Transform( -3.12224e-08, -0.330438, 0.784895, 0, 0.471914, 0.549589, -0.714286, 1.44439e-08, -3.43088e-08, -1.25, 0.3, 0 )
+far = 200.0
+
+[node name="ColorRect" type="ColorRect" parent="EscalatorOne3"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+
+[node name="bmas_prepare" type="AudioStreamPlayer" parent="EscalatorOne3"]
+stream = ExtResource( 63 )
+volume_db = -5.0
+
+[node name="bmas_approach" type="AudioStreamPlayer" parent="EscalatorOne3"]
+stream = ExtResource( 61 )
+volume_db = -5.0
+
+[node name="rumble" type="AudioStreamPlayer" parent="EscalatorOne3"]
+stream = ExtResource( 64 )
+volume_db = -80.0
+autoplay = true
+
+[node name="screech" type="AudioStreamPlayer" parent="EscalatorOne3"]
 stream = ExtResource( 62 )
 volume_db = -10.0
 
