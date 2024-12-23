@@ -14,6 +14,9 @@ func _ready():
 	if data == null:
 		print("Corrupted config. Defaulting all settings.")
 		default_settings()
+	if data["sensitivity"] == 0:
+		print("Sensitivity found as 0. Defaulting. You can change it back to 0, but it will always default on startup.")
+		data["sensitivity"] = defaultSettings["sensitivity"]
 #	print(data["sensitivity"])
 
 func save_data():

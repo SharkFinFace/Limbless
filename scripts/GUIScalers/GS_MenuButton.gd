@@ -103,3 +103,10 @@ func failed_request():
 	set("custom_colors/font_color", "ff0000")
 	set("custom_colors/font_color_hover", "ff0000")
 	set("custom_colors/font_color_pressed", "ff0000")
+
+
+func _on_Settings_pressed():
+	PauseMenu.load_settings()
+	PauseMenu.visible = true
+	PauseMenu.get_node("TextureRect").settings_visibility(false)
+	pass # Replace with function body.

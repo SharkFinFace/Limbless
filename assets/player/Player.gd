@@ -125,13 +125,14 @@ func handle_raycast():
 		self.on_floor = false;
 
 func _process(_delta : float):
-	self.yaw_pitch.x = lerp_angle(self.yaw_pitch.x, self.target_yaw_pitch.x, self.mouse_acceleration);
-	self.yaw_pitch.y = lerp_angle(self.yaw_pitch.y, self.target_yaw_pitch.y, self.mouse_acceleration);
-	$Camera.rotation = Vector3.ZERO;
-	$Camera.rotate_x(self.yaw_pitch.y)
-	$Camera.rotate_y(self.yaw_pitch.x)
-	
-	$Camera.fov = lerp($Camera.fov, self.target_fov, self.fov_acceleration)
+	if not SettingVariables.is_paused:
+		self.yaw_pitch.x = lerp_angle(self.yaw_pitch.x, self.target_yaw_pitch.x, self.mouse_acceleration);
+		self.yaw_pitch.y = lerp_angle(self.yaw_pitch.y, self.target_yaw_pitch.y, self.mouse_acceleration);
+		$Camera.rotation = Vector3.ZERO;
+		$Camera.rotate_x(self.yaw_pitch.y)
+		$Camera.rotate_y(self.yaw_pitch.x)
+		
+		$Camera.fov = lerp($Camera.fov, self.target_fov, self.fov_acceleration)
 	
 	# TODO: Idealy, this should be called when the settings are newly saved.
 	# This will suffice for now.

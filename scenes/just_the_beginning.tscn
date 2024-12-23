@@ -427,7 +427,6 @@ margin_right = 218.0
 margin_bottom = 169.0
 custom_fonts/font = SubResource( 32 )
 custom_styles/focus = SubResource( 35 )
-disabled = true
 text = "Settings"
 flat = true
 align = 0
@@ -511,6 +510,7 @@ cast_shadow = 0
 mesh = SubResource( 2665 )
 
 [connection signal="pressed" from="Begin" to="Begin" method="_on_Begin_pressed"]
+[connection signal="pressed" from="Settings" to="Settings" method="_on_Settings_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]
 [connection signal="pressed" from="Discord" to="Discord" method="_on_Discord_pressed"]
 [connection signal="pressed" from="Credits" to="Credits" method="_on_Credits_pressed"]
