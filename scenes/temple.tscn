@@ -1,4 +1,4 @@
-[gd_scene load_steps=586 format=2]
+[gd_scene load_steps=587 format=2]
 
 [ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=1]
 [ext_resource path="res://maps/textures/dev_green.png" type="Texture" id=2]
@@ -2517,6 +2517,24 @@ albedo_texture = ExtResource( 26 )
 material = SubResource( 1409 )
 size = Vector2( 10, 10 )
 
+[sub_resource type="Animation" id=4744]
+resource_name = "bob"
+length = 16.0
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 8, 16 ),
+"transitions": PoolRealArray( -2, -2, -2 ),
+"update": 0,
+"values": [ Vector3( -81, 22, -25 ), Vector3( -81, 20, -25 ), Vector3( -81, 22, -25 ) ]
+}
+
 [sub_resource type="Animation" id=1098]
 resource_name = "fadein"
 length = 2.0
@@ -4255,9 +4273,14 @@ cast_shadow = 0
 mesh = SubResource( 2532 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81, 21, -25 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81, 22, -25 )
 cast_shadow = 0
 mesh = SubResource( 1410 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3"]
+anims/bob = SubResource( 4744 )
+script = ExtResource( 6 )
+animationName = "bob"
 
 [node name="Seagrasses" type="Spatial" parent="."]
 
