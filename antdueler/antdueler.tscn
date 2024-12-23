@@ -47,7 +47,7 @@
 [ext_resource path="res://antdueler/antdueler_boot.tscn" type="PackedScene" id=45]
 [ext_resource path="res://scripts/preloads/PreloadAntdueler.gd" type="Script" id=46]
 [ext_resource path="res://fonts/PeaberryBase.ttf" type="DynamicFontData" id=47]
-[ext_resource path="res://scripts/GUIScalers/GS_InteractionLabel.gd" type="Script" id=48]
+[ext_resource path="res://antdueler/GS_Hint.gd" type="Script" id=48]
 
 [sub_resource type="Animation" id=3]
 resource_name = "attack"
