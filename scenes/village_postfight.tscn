@@ -3864,7 +3864,7 @@ yaw_pitch = Vector2( 0.328, -0.325 )
 target_yaw_pitch = Vector2( 0.328, -0.325 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5, 2, 21 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47, 7.9, -22 )
 cast_shadow = 0
 mesh = SubResource( 916 )
 
