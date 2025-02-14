@@ -17,4 +17,5 @@ mono_crash.*.json
 assets.txt
 builds/*
 !builds/.gitkeep
-maps/autosave
+maps/autosave/*
+!maps/autosave/.gdignore
