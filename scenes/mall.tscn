@@ -3685,6 +3685,11 @@ skeleton = NodePath("../..")
 [node name="ExitTrain2" parent="ExitTrain" instance=ExtResource( 69 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -146, -41.25, -7 )
 
+[node name="StaticBody" parent="ExitTrain/ExitTrain2/Door" index="0"]
+collision_layer = 0
+
 [editable path="Arm/brick"]
 [editable path="ExitTrain"]
 [editable path="ExitTrain/Door"]
+[editable path="ExitTrain/ExitTrain2"]
+[editable path="ExitTrain/ExitTrain2/Door"]
